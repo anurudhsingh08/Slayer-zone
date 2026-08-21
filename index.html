@@ -1168,8 +1168,28 @@ class="popup">
         </button>
 
 
-        <h2 id="animeTitle
-            
+        <h2 id="animeTitle">Anime Title</h2>
+        <p id="animeAlt"></p>
+        <p><strong>Genre:</strong> <span id="animeGenre"></span></p>
+        <p><strong>Year:</strong> <span id="animeYear"></span> | <strong>Status:</strong> <span id="animeStatus"></span></p>
+        <p><strong>Rating:</strong> <span id="animeRating"></span> | <strong>Episodes:</strong> <span id="animeEpisodes"></span></p>
+        <p><strong>Studio:</strong> <span id="animeStudio"></span></p>
+        <p id="animeSynopsis" style="margin-top:12px;line-height:1.6;"></p>
+        <div class="popup-buttons">
+            <button id="trailerBtn" onclick="watchTrailer('ds')">🎬 Trailer</button>
+        </div>
+    </div>
+</div>
+
 <script src="script.js"></script>
+
+<!-- Fallback: agar JS fail ho to 4 second baad loading hata do -->
+<script>
+setTimeout(function(){
+  var s = document.getElementById('loadingScreen');
+  if(s){ s.style.display='none'; s.style.opacity='0'; }
+}, 4000);
+</script>
+
 </body>
-        </html>
+</html>
