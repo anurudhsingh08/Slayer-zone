@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>⚔️ SlayerZone | Ultimate Anime Universe</title>
+
+<meta
+name="description"
+content="SlayerZone - Anime News, Collection, Trailers, Battle Arena and More">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+<!-- ===========================
+Loading Screen
+=========================== -->
+
+<div id="loadingScreen" class="loading-screen">
+
+    <div class="loader-box">
+
+        <h2>⚔️ SlayerZone</h2>
+
+        <div id="dice">🎲</div>
+
+        <p>Loading Anime Universe...</p>
+
+    </div>
+
+</div>
+
+
+<!-- ===========================
+Welcome Popup
+=========================== -->
+
+<div id="welcomePopup" class="popup">
+
+    <div class="popup-content">
+
+        <h2>⚔️ Welcome to SlayerZone</h2>
+
+        <p>
+
+            🔥 Latest Anime News<br>
+            🎬 Watch Trailers<br>
+            🎲 Random Anime<br>
+            ❤️ Save Favourite Anime
+
+        </p>
+
+        <button onclick="closeWelcome()">
+
+            Enter Website 🚀
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ===========================
+Header
+=========================== -->
+
+<header class="main-header">
+
+    <div class="header-top">
+
+        <h1 class="logo">
+            ⚔️ SlayerZone
+        </h1>
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                🏠 Home
+            </a>
+
+            <a href="anime.html">
+                🎬 Anime
+            </a>
+
+            <a href="#news">
+                📰 News
+            </a>
+
+            <a href="#collection">
+                🌟 Collection
+            </a>
+
+            <a href="#arena">
+                ⚔️ Arena
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- Search + Controls -->
+
+    <div class="header-controls">
+
+        <div class="search-box">
+
+            <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search Anime..."
+            autocomplete="off">
+
+            <button
+            id="searchBtn"
+            onclick="searchAnime()">
+
+                🔍 Search
+
+            </button>
+
+        </div>
+
+
+        <button
+        class="music-btn"
+        onclick="toggleMusic()">
+
+            🎵 Music
+
+        </button>
+
+
+        <button
+        class="theme-btn"
+        onclick="toggleTheme()">
+
+            🌙 Theme
+
+        </button>
+
+
+        <div id="liveClock">
+
+        </div>
+
+    </div>
+
+
+    <!-- Background Music -->
+
+<audio id="bgMusic">
+    <source src="music/jjk.mp3" type="audio/mpeg">
+</audio>
+
+</header>
+
+<div class="music-player-bar">
+
+    <div class="music-cover">
+        🎵
+    </div>
+
+    <div class="music-details">
+
+        <span class="now-playing">
+            NOW PLAYING
+        </span>
+
+        <h3 id="songName">
+            demonslayer Theme
+        </h3>
+
+<div class="music-progress-area">
+
+    <span id="currentTime">0:00</span>
+
+    <div class="music-seekbar">
+        <div
+            id="musicProgress"
+            class="music-progress-fill">
+        </div>
+
+        <input
+            id="musicSeek"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+            aria-label="Music progress">
+    </div>
+
+    <span id="duration">0:00</span>
+
+</div>
+
+    </div>
+
+    <div class="music-controls">
+
+        <button onclick="previousSong()">
+            ⏮
+        </button>
+
+        <button
+            onclick="toggleMusic()"
+            id="musicBtn"
+            class="play-main">
+            ▶
+        </button>
+
+        <button onclick="nextSong()">
+            ⏭
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===========================
+Main Content
+=========================== -->
+
+<main>
+
+
+<!-- ===========================
+Hero Section
+=========================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h2>
+            Welcome to SlayerZone
+        </h2>
+
+        <p>
+            Your Ultimate Anime Universe
+        </p>
+
+
+        <!-- Score -->
+
+        <div class="hero-status">
+
+            <div id="score">
+                🏆 Score : 0
+            </div>
+
+            <div id="level">
+                🌱 Beginner
+            </div>
+
+        </div>
+
+
+        <!-- Hero Slider -->
+
+        <div class="slider">
+
+            <img
+            id="sliderImage"
+            class="banner"
+            src="images/banner.jpg"
+            alt="SlayerZone Banner">
+
+        </div>
+
+
+        <!-- Hero Buttons -->
+
+        <div class="hero-buttons">
+
+            <button
+            onclick="exploreNow()">
+
+                🚀 Explore Now
+
+            </button>
+
+
+            <button
+            onclick="randomAnime()">
+
+                🎲 Recommend Me
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+Stats
+=========================== -->
+
+<section class="stats">
+
+    <div class="stat-box">
+
+        <h3>
+            500+
+        </h3>
+
+        <p>
+            Anime Collection
+        </p>
+
+    </div>
+
+
+    <div class="stat-box">
+
+        <h3>
+            100+
+        </h3>
+
+        <p>
+            Popular Characters
+        </p>
+
+    </div>
+
+
+    <div class="stat-box">
+
+        <h3>
+            24/7
+        </h3>
+
+        <p>
+            Latest Updates
+        </p>
+
+    </div>
+
+
+    <div class="stat-box">
+
+        <h3>
+            10K+
+        </h3>
+
+        <p>
+            Anime Fans
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+Latest Anime News
+=========================== -->
+
+<section
+id="news"
+class="news">
+
+    <h2 class="title">
+        🔥 Latest Anime News
+    </h2>
+
+
+    <div class="news-container">
+
+
+        <!-- Demon Slayer News -->
+
+        <div class="news-card">
+
+            <h3>
+                ⚔️ Demon Slayer
+            </h3>
+
+            <p>
+                Infinity Castle Arc is finally arriving with breathtaking animation.
+            </p>
+
+            <button
+            onclick="showAnime('ds')">
+
+                 ✨ Discover
+
+            </button>
+
+        </div>
+
+
+        <!-- JJK News -->
+
+        <div class="news-card">
+
+            <h3>
+                👑 Jujutsu Kaisen
+            </h3>
+
+            <p>
+                Season 3 is officially under production.
+            </p>
+
+            <button
+            onclick="showAnime('jjk')">
+
+                 ✨ Discover
+
+            </button>
+
+        </div>
+
+
+        <!-- One Piece News -->
+
+        <div class="news-card">
+
+            <h3>
+                🏴‍☠️ One Piece
+            </h3>
+
+            <p>
+                Egghead Arc continues with exciting new episodes.
+            </p>
+
+            <button
+            onclick="showAnime('op')">
+
+                 ✨ Discover
+
+            </button>
+
+        </div>
+
+
+        <!-- Blue Lock News -->
+
+        <div class="news-card">
+
+            <h3>
+                ⚽ Blue Lock
+            </h3>
+
+            <p>
+                Blue Lock players enter the biggest football challenge.
+            </p>
+
+            <button
+            onclick="showAnime('bl')">
+
+                 ✨ Discover
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section> 
+
+<!-- ===========================
+     🔥 POPULAR ANIME
+=========================== -->
+
+<section class="popular" id="popular">
+
+    <h2 class="title">🔥 Popular Anime</h2>
+
+<div class="anime-grid">
+
+    <p class="section-subtitle">
+        The most popular anime in SlayerZone
+    </p>
+
+    <div class="popular-grid">
+
+        <!-- 1️⃣ DEMON SLAYER -->
+
+        <div class="anime-card">
+
+            <div class="anime-image">
+                <img
+                    src="images/demonslayer.jpg"
+                    alt="Demon Slayer"
+                >
+
+                <span class="anime-number">01</span>
+            </div>
+
+            <div class="anime-card-content">
+
+                <span class="anime-tag">
+                    ⚔️ Action
+                </span>
+
+                <h3>Demon Slayer</h3>
+
+                <p>
+                    Enter the world of Demon Slayers.
+                </p>
+
+                <button
+                    onclick="showAnime('demonslayer')">
+                    Explore ⚔️
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2️⃣ JJK -->
+
+        <div class="anime-card">
+
+            <div class="anime-image">
+                <img
+                    src="images/jjk.jpg"
+                    alt="Jujutsu Kaisen"
+                >
+
+                <span class="anime-number">02</span>
+            </div>
+
+            <div class="anime-card-content">
+
+                <span class="anime-tag">
+                    👁️ Dark Fantasy
+                </span>
+
+                <h3>Jujutsu Kaisen</h3>
+
+                <p>
+                    Enter the world of cursed energy.
+                </p>
+
+                <button
+                    onclick="showAnime('jjk')">
+                    Explore 👁️
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3️⃣ BLUE LOCK -->
+
+        <div class="anime-card">
+
+            <div class="anime-image">
+                <img
+                    src="images/bluelock.jpg"
+                    alt="Blue Lock"
+                >
+
+                <span class="anime-number">03</span>
+            </div>
+
+            <div class="anime-card-content">
+
+                <span class="anime-tag">
+                    ⚽ Sports
+                </span>
+
+                <h3>Blue Lock</h3>
+
+                <p>
+                    Become the ultimate striker.
+                </p>
+
+                <button
+                    onclick="showAnime('bluelock')">
+                    Explore ⚽
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4️⃣ SOLO LEVELING -->
+
+        <div class="anime-card">
+
+            <div class="anime-image">
+                <img
+                    src="images/sololeveling.jpg"
+                    alt="Solo Leveling"
+                >
+
+                <span class="anime-number">04</span>
+            </div>
+
+            <div class="anime-card-content">
+
+                <span class="anime-tag">
+                    🌌 Fantasy
+                </span>
+
+                <h3>Solo Leveling</h3>
+
+                <p>
+                    Arise and become stronger.
+                </p>
+
+                <button
+                    onclick="showAnime('sololeveling')">
+                    Explore 🌌
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===========================
+         📚 ALL ANIME BUTTON
+    =========================== -->
+
+    <button
+        class="all-anime-btn"
+        onclick="openAllAnime()">
+
+        📚 All Anime
+        <span>→</span>
+
+    </button>
+
+</section>
+
+
+<!-- ===========================
+     📚 ALL ANIME POPUP
+=========================== -->
+
+<div
+    id="allAnimePopup"
+    class="popup">
+
+    <div
+        class="popup-content all-anime-popup">
+
+        <button
+            class="popup-close"
+            onclick="closeAllAnime()">
+            ✕
+        </button>
+
+        <h2>📚 All Anime</h2>
+
+        <p>
+            Explore the complete anime universe.
+        </p>
+
+
+        <div class="all-anime-grid">
+
+
+            <!-- 01 -->
+
+            <div class="anime-mini-card">
+
+                <img
+                    src="images/naruto.jpg"
+                    alt="Naruto">
+
+                <h3>Naruto</h3>
+
+                <button
+                    onclick="showAnime('naruto')">
+                    Open
+                </button>
+
+            </div>
+
+
+            <!-- 02 -->
+
+            <div class="anime-mini-card">
+
+                <img
+                    src="images/onepiece.jpg"
+                    alt="One Piece">
+
+                <h3>One Piece</h3>
+
+                <button
+                    onclick="showAnime('onepiece')">
+                    Open
+                </button>
+
+            </div>
+
+
+            <!-- 03 -->
+
+            <div class="anime-mini-card">
+
+                <img
+                    src="images/bleach.jpg"
+                    alt="Bleach">
+
+                <h3>Bleach</h3>
+
+                <button
+                    onclick="showAnime('bleach')">
+                    Open
+                </button>
+
+            </div>
+
+
+            <!-- 04 -->
+
+            <div class="anime-mini-card">
+
+                <img
+                    src="images/aot.jpg"
+                    alt="Attack on Titan">
+
+                <h3>Attack on Titan</h3>
+
+                <button
+                    onclick="showAnime('aot')">
+                    Open
+                </button>
+
+            </div>
+
+
+            <!-- 05 -->
+
+            <div class="anime-mini-card">
+
+                <img
+                    src="images/hunterxhunter.jpg"
+                    alt="Hunter x Hunter">
+
+                <h3>Hunter x Hunter</h3>
+
+                <button
+                    onclick="showAnime('hxh')">
+                    Open
+                </button>
+
+            </div>
+
+
+            <!-- 06 -->
+
+            <div class="anime-mini-card">
+
+                <img
+                    src="images/mha.jpg"
+                    alt="My Hero Academia">
+
+                <h3>My Hero Academia</h3>
+
+                <button
+                    onclick="showAnime('mha')">
+                    Open
+                </button>
+
+            </div>
+
+
+            <!-- 07 -->
+
+            <div class="anime-mini-card">
+
+                <img
+                    src="images/blackclover.jpg"
+                    alt="Black Clover">
+
+                <h3>Black Clover</h3>
+
+                <button
+                    onclick="showAnime('blackclover')">
+                    Open
+                </button>
+
+            </div>
+
+
+            <!-- 08 -->
+
+            <div class="anime-mini-card">
+
+                <img
+                    src="images/chainsawman.jpg"
+                    alt="Chainsaw Man">
+
+                <h3>Chainsaw Man</h3>
+
+                <button
+                    onclick="showAnime('chainsawman')">
+                    Open
+                </button>
+
+            </div>
+
+
+            <!-- 09 -->
+
+            <div class="anime-mini-card">
+
+                <img
+                    src="images/haikyuu.jpg"
+                    alt="Haikyuu">
+
+                <h3>Haikyuu</h3>
+
+                <button
+                    onclick="showAnime('haikyuu')">
+                    Open
+                </button>
+
+            </div>
+
+
+            <!-- 10 -->
+
+            <div class="anime-mini-card">
+
+                <img
+                    src="images/jujutsukaisen0.jpg"
+                    alt="JJK 0">
+
+                <h3>JJK 0</h3>
+
+                <button
+                    onclick="showAnime('jjk0')">
+                    Open
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="view-all">
+
+        <button
+        class="view-all-btn"
+        onclick="location.href='anime.html'">
+
+            🌟 View All Anime
+
+        </button>
+
+    </div>
+
+</section> <!-- ===========================
+Anime Battle Arena
+=========================== -->
+
+<section id="arena" class="battle-arena">
+
+    <h2 class="title">
+        ⚔️ Anime Battle Arena
+    </h2>
+
+    <p class="arena-text">
+        Choose your favourite mode and challenge yourself!
+    </p>
+
+
+    <div class="cards">
+
+
+        <!-- ===========================
+        Anime Quiz
+        =========================== -->
+
+        <div class="card arena-card">
+
+            <div class="arena-icon">
+                🧠
+            </div>
+
+            <h3>
+                Anime Quiz
+            </h3>
+
+            <p>
+                Test your anime knowledge with exciting questions.
+            </p>
+
+            <button
+            class="arena-btn"
+            onclick="startQuiz()">
+
+                🚀 Start Quiz
+
+            </button>
+
+        </div>
+
+
+        <!-- ===========================
+        Character Battle
+        =========================== -->
+
+        <div class="card arena-card">
+
+            <div class="arena-icon">
+                ⚔️
+            </div>
+
+            <h3>
+                Character Battle
+            </h3>
+
+            <p>
+                Choose who you think will win the anime battle.
+            </p>
+
+            <button
+            class="arena-btn"
+            onclick="startBattle()">
+
+                🔥 Start Battle
+
+            </button>
+
+        </div>
+
+
+        <!-- ===========================
+        Random Challenge
+        =========================== -->
+
+        <div class="card arena-card">
+
+            <div class="arena-icon">
+                🎲
+            </div>
+
+            <h3>
+                Random Challenge
+            </h3>
+
+            <p>
+                Get a random anime challenge and type your answer.
+            </p>
+
+            <button
+            class="arena-btn"
+            onclick="randomChallenge()">
+
+                🎯 Play Challenge
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+Quiz / Battle / Challenge Popup
+=========================== -->
+
+<div
+id="quizPopup"
+class="quiz-popup">
+
+    <div class="quiz-box">
+
+
+        <!-- Close -->
+
+        <button
+        class="close-btn"
+        onclick="closeQuiz()"
+        aria-label="Close">
+
+            ✖
+
+        </button>
+
+
+        <!-- Popup Title -->
+
+        <h2 id="quizTitle">
+            🧠 Anime Quiz
+        </h2>
+
+
+        <!-- Question -->
+
+        <p id="quizQuestion">
+
+            Question will appear here...
+
+        </p>
+
+
+        <!-- ===========================
+        MCQ Options
+        =========================== -->
+
+        <div id="quizOptions">
+
+            <button
+            id="optionA"
+            onclick="checkAnswer('A')">
+
+                A. Option A
+
+            </button>
+
+
+            <button
+            id="optionB"
+            onclick="checkAnswer('B')">
+
+                B. Option B
+
+            </button>
+
+
+            <button
+            id="optionC"
+            onclick="checkAnswer('C')">
+
+                C. Option C
+
+            </button>
+
+        </div>
+
+
+        <!-- ===========================
+        Type Answer
+        Used for Battle + Challenge
+        =========================== -->
+
+        <input
+        type="text"
+        id="answerInput"
+        placeholder="Type your answer..."
+        autocomplete="off">
+
+
+        <button
+        id="submitAnswer"
+        onclick="submitTypedAnswer()">
+
+            ✅ Submit Answer
+
+        </button>
+
+
+        <!-- Result -->
+
+        <p id="quizResult"></p>
+
+
+    </div>
+
+</div> <!-- ===========================
+Anime Of The Day
+=========================== -->
+
+<section class="anime-day">
+
+    <h2 class="title">
+        🌟 Anime Of The Day
+    </h2>
+
+    <div class="day-card">
+
+        <img
+        src="images/demonslayer.jpg"
+        alt="Anime Of The Day">
+
+        <div class="day-content">
+
+            <h3>
+                ⚔️ Demon Slayer
+            </h3>
+
+            <p>
+                Today's featured anime recommendation.
+                Explore the story, characters and amazing battles.
+            </p>
+
+            <div class="card-buttons">
+
+                <button
+                onclick="showAnime('ds')">
+
+                    📖 Details
+
+                </button>
+
+                <button
+                onclick="watchTrailer('ds')">
+
+                    🎬 Watch Trailer
+
+                </button>
+
+                <button
+                class="like-btn">
+
+                    ❤️ Like
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</section>
+
+
+<!-- ===========================
+Anime Information Popup
+=========================== -->
+
+<div
+id="animePopup"
+class="popup">
+
+    <div class="popup-content">
+
+        <button
+        class="close"
+        onclick="closePopup()">
+
+            ✖
+
+        </button>
+
+
+        <h2 id="animeTitle
