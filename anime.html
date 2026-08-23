@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>All Anime | SlayerZone</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
 <header>
-
 <h1>⚔️ SlayerZone</h1>
-
 <nav>
-
 <a href="index.html">Home</a>
 <a href="anime.html">Anime</a>
-
 </nav>
-
 </header>
 
 <h2 class="title">🌟 All Anime Collection</h2>
 
-<section class="anime-grid"><div class="anime-card">
+<section class="anime-grid">
+
+<div class="anime-card">
 <img src="demonslayer.jpg" alt="Demon Slayer">
 <h3>⚔️ Demon Slayer</h3>
 <p>⭐ 9.8/10</p>
@@ -57,107 +48,108 @@
 <img src="naruto.jpg" alt="Naruto">
 <h3>🍥 Naruto</h3>
 <p>⭐ 9.6/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('naruto')">📖 Read More</button>
+<button onclick="watchTrailer('naruto')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
 <img src="sololeveling.jpg" alt="Solo Leveling">
 <h3>💙 Solo Leveling</h3>
 <p>⭐ 9.8/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('sololeveling')">📖 Read More</button>
+<button onclick="watchTrailer('sololeveling')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
 <img src="bluelock.jpg" alt="Blue Lock">
 <h3>⚽ Blue Lock</h3>
 <p>⭐ 9.5/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
-</div><div class="anime-card">
-<img src="images/dragonball.jpg" alt="Dragon Ball Z">
+<button onclick="showAnime('bluelock')">📖 Read More</button>
+<button onclick="watchTrailer('bluelock')">🎬 Trailer</button>
+</div>
+
+<div class="anime-card">
+<img src="dragonball.jpg" alt="Dragon Ball Z">
 <h3>🐉 Dragon Ball Z</h3>
 <p>⭐ 9.8/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('dragonball')">📖 Read More</button>
+<button onclick="watchTrailer('dragonball')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
 <img src="aot.jpg" alt="Attack on Titan">
 <h3>🔥 Attack on Titan</h3>
 <p>⭐ 9.9/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('aot')">📖 Read More</button>
+<button onclick="watchTrailer('aot')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
 <img src="chainsawman.jpg" alt="Chainsaw Man">
 <h3>🧪 Chainsaw Man</h3>
 <p>⭐ 9.3/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('chainsawman')">📖 Read More</button>
+<button onclick="watchTrailer('chainsawman')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
-<img src="bleach.jpg" alt="Bleach">
+<img src="Bleach.jpg" alt="Bleach">
 <h3>👻 Bleach</h3>
 <p>⭐ 9.7/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('bleach')">📖 Read More</button>
+<button onclick="watchTrailer('bleach')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
 <img src="blackclover.jpg" alt="Black Clover">
 <h3>🍀 Black Clover</h3>
 <p>⭐ 9.4/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('blackclover')">📖 Read More</button>
+<button onclick="watchTrailer('blackclover')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
 <img src="haikyuu.jpg" alt="Haikyuu!!">
 <h3>🏐 Haikyuu!!</h3>
 <p>⭐ 9.6/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('haikyuu')">📖 Read More</button>
+<button onclick="watchTrailer('haikyuu')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
 <img src="dandadan.jpg" alt="Dandadan">
 <h3>👹 Dandadan</h3>
 <p>⭐ 9.5/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('dandadan')">📖 Read More</button>
+<button onclick="watchTrailer('dandadan')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
 <img src="hellsparadise.jpg" alt="Hell's Paradise">
 <h3>🗡️ Hell's Paradise</h3>
 <p>⭐ 9.3/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('hellsparadise')">📖 Read More</button>
+<button onclick="watchTrailer('hellsparadise')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
 <img src="windbreaker.jpg" alt="Wind Breaker">
 <h3>🥊 Wind Breaker</h3>
 <p>⭐ 9.2/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('windbreaker')">📖 Read More</button>
+<button onclick="watchTrailer('windbreaker')">🎬 Trailer</button>
 </div>
 
 <div class="anime-card">
 <img src="deathnote.jpg" alt="Death Note">
 <h3>♟️ Death Note</h3>
 <p>⭐ 9.9/10</p>
-<button>📖 Read More</button>
-<button>🎬 Trailer</button>
+<button onclick="showAnime('deathnote')">📖 Read More</button>
+<button onclick="watchTrailer('deathnote')">🎬 Trailer</button>
 </div>
 
 </section>
 
 <script src="script.js"></script>
-
 </body>
 </html>
