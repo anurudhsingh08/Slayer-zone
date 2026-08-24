@@ -392,18 +392,3 @@ footer{margin-top:40px;padding:28px 5%;text-align:center;color:var(--muted);bord
 @media(max-width:380px){
   .anime-grid,.popular-grid,.all-anime-grid{grid-template-columns:1fr}
       }
-
-            width: 34px;
-        height: 34px;
-
-        background: rgba(10,18,35,0.45);
-    }
-
-    .effect span {
-        font-size: 16px;
-    }
-
-    .effect small {
-        display: none;
-    }
-  }
