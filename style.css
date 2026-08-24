@@ -1,3549 +1,394 @@
-/* ===========================
-   📱 Screen Size Fix
-=========================== */
-
-html,
-body{
-    width:100%;
-    max-width:100%;
-    min-height:100%;
-    margin:0;
-    padding:0;
-    overflow-x:hidden;
-}
-
-*{
-    box-sizing:border-box;
-}
-
-img{
-    max-width:100%;
-    height:auto;
-}
-
-section,
-header,
-footer,
-main{
-    width:100%;
-    max-width:100%;
-}
-
-/* Prevent anything from making the page wider */
-
-.cards,
-.anime-grid,
-.news-container,
-.stats,
-.footer-container{
-    width:100%;
-    max-width:100%;
-}
-
-/* Mobile */
-
-@media (max-width:768px){
-
-    section{
-        padding-left:5%;
-        padding-right:5%;
-    }
-
-    .hero{
-        width:100%;
-        min-width:0;
-    }
-
-    .hero-content{
-        width:100%;
-        min-width:0;
-    }
-
-    .cards,
-    .anime-grid,
-    .news-container{
-        grid-template-columns:1fr;
-    }
-
-    .search-box{
-        width:100%;
-    }
-
-    .search-box input{
-        width:100%;
-        max-width:100%;
-    }
-
-}
-
-/* ======================================
-   ⚔️ SlayerZone v7.0
-   Part 1/7
-   Reset + Body + Header + Navbar
-====================================== */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-background:linear-gradient(
-180deg,
-#0d1117,
-#111827,
-#0d1117);
-
-color:#ffffff;
-
-line-height:1.6;
-
-overflow-x:hidden;
-
-transition:.4s;
-
-}
-
-/* ===============================
-Header
-=============================== */
-
-header{
-
-position: static;
-
-z-index:9999;
-
-padding:20px;
-
-background:#161b22;
-
-text-align:center;
-
-box-shadow:
-0 0 20px rgba(0,191,255,.25);
-
-}
-
-header h1{
-
-font-size:42px;
-
-color:#00bfff;
-
-margin-bottom:15px;
-
-text-shadow:
-
-0 0 10px #00bfff,
-
-0 0 20px #00bfff;
-
-}
-
-/* ===============================
-Navbar
-=============================== */
-
-nav{
-  
- display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:18px;
-
-flex-wrap:wrap;
-
-margin-bottom:18px;
-
-}
-
-nav a{
-
-text-decoration:none;
-
-color:#ffffff;
-
-font-weight:bold;
-
-padding:10px 18px;
-
-border-radius:25px;
-
-transition:.3s;
-
-}
-
-nav a:hover{
-
-background:rgba(0,191,255,.18);
-
-color:#00e5ff;
-
-box-shadow:
-
-0 0 15px rgba(0,191,255,.5);
-
-}
-
-/* ===============================
-Search Bar
-=============================== */
-
-.search-box{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:10px;
-
-flex-wrap:wrap;
-
-margin-top:10px;
-
-}
-
-.search-box input{
-
-width:340px;
-
-max-width:95%;
-
-padding:12px 18px;
-
-border:none;
-
-outline:none;
-
-border-radius:30px;
-
-font-size:16px;
-
-background:#ffffff;
-
-color:#111;
-
-box-shadow:
-
-0 0 15px rgba(0,191,255,.4);
-
-transition:.3s;
-
-}
-
-.search-box input:focus{
-
-box-shadow:
-0 0 10px #00bfff,
-
-0 0 20px rgba(0,191,255,.5);
-
-}
-
-.search-box button{
-
-padding:12px 22px;
-
-border:none;
-
-border-radius:30px;
-
-cursor:pointer;
-
-font-size:15px;
-
-font-weight:bold;
-
-background:#00bfff;
-
-color:#ffffff;
-
-transition:.3s;
-
-box-shadow:
-
-0 0 10px rgba(0,191,255,.4);
-
-}
-
-.search-box button:hover{
-
-background:#0099ff;
-
-transform:translateY(-2px) scale(1.05);
-
-box-shadow:
-
-0 0 18px #00bfff,
-
-0 0 30px rgba(0,191,255,.6);
-
-}
-
-/* ===============================
-Music & Theme Buttons
-=============================== */
-
-.music-btn{
-
-background:linear-gradient(
-45deg,
-#00bfff,
-#008cff);
-
-}
-
-.theme-btn{
-
-background:linear-gradient(
-45deg,
-#6a5cff,
-#8f7cff);
-
-}
-
-/* ===============================
-Live Clock
-=============================== */
-
-#liveClock{
-
-margin-top:15px;
-
-font-size:18px;
-
-font-weight:bold;
-
-color:#00e5ff;
-
-text-shadow:
-
-0 0 10px #00bfff;
-
-} /* ======================================
-   ⚔️ SlayerZone v7.0
-   Part 2/7
-   Hero + Banner + Buttons
-======================================*/
-
-/* ===============================
-Hero Section
-=============================== */
-
-.hero{
-
-padding:70px 20px;
-
-text-align:center;
-
-animation:heroFade 1s ease;
-
-}
-
-.hero h2{
-
-font-size:50px;
-
-margin-bottom:15px;
-
-color:#ffffff;
-
-text-shadow:
-
-0 0 10px #00bfff,
-
-0 0 20px #00bfff,
-
-0 0 40px #00bfff;
-
-animation:heroGlow 2s infinite alternate;
-
-}
-
-.hero p{
-
-font-size:20px;
-
-color:#d6eaff;
-
-margin-bottom:30px;
-
-}
-
-/* ===============================
-Hero Slider
-=============================== */
-
-.slider{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-margin:25px auto;
-
-}
-
-.banner{
-
-width:92%;
-
-max-width:950px;
-
-border-radius:20px;
-
-border:3px solid #00bfff;
-
-box-shadow:
-
-0 0 25px rgba(0,191,255,.6),
-
-0 0 45px rgba(0,191,255,.25);
-
-transition:.5s;
-
-animation:bannerFloat 4s ease-in-out infinite;
-
-}
-
-.banner:hover{
-
-transform:scale(1.02);
-
-box-shadow:
-
-0 0 30px #00bfff,
-
-0 0 60px rgba(0,191,255,.6);
-
-} /* ===============================
-Hero Buttons
-=============================== */
-
-.hero-buttons{
-
-margin-top:30px;
-
-display:flex;
-
-justify-content:center;
-
-gap:18px;
-
-flex-wrap:wrap;
-
-}
-
-.hero-buttons button{
-
-padding:14px 28px;
-
-border:none;
-
-border-radius:30px;
-
-font-size:16px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-background:#00bfff;
-
-color:#ffffff;
-
-transition:.3s;
-
-box-shadow:
-
-0 0 12px rgba(0,191,255,.45);
-
-}
-
-.hero-buttons button:hover{
-
-background:#0099ff;
-
-transform:translateY(-3px) scale(1.05);
-
-box-shadow:
-
-0 0 20px #00bfff,
-
-0 0 35px rgba(0,191,255,.65);
-
-}
-
-/* ===============================
-Animations
-=============================== */
-
-@keyframes heroFade{
-
-0%{
-
-opacity:0;
-
-transform:translateY(40px);
-
-}
-
-100%{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-@keyframes heroGlow{
-
-from{
-
-text-shadow:
-
-0 0 10px #00bfff;
-
-}
-
-to{
-
-text-shadow:
-
-0 0 20px #00bfff,
-
-0 0 40px #00bfff,
-
-0 0 60px #00bfff;
-
-}
-
-}
-
-@keyframes bannerFloat{
-
-0%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-8px);
-
-}
-
-100%{
-
-transform:translateY(0);
-
-}
-
-}
-
-.fade-in{
-
-opacity:1;
-
-transition:.5s;
-
-}
-
-.fade-out{
-
-opacity:0;
-
-transition:.5s;
-
-} /* ======================================
-   ⚔️ SlayerZone v7.0
-   Part 3/7
-   Stats + News + Cards + Collection
-====================================== */
-
-/* ===============================
-Section Title
-=============================== */
-
-.title{
-
-text-align:center;
-
-font-size:36px;
-
-margin-bottom:35px;
-
-color:#00bfff;
-
-text-shadow:
-0 0 10px #00bfff,
-0 0 25px #00bfff;
-
-}
-
-.title::after{
-
-content:"";
-
-display:block;
-
-width:90px;
-
-height:4px;
-
-margin:12px auto;
-
-border-radius:20px;
-
-background:#00bfff;
-
-box-shadow:0 0 12px #00bfff;
-
-}
-
-/* ===============================
-Stats
-=============================== */
-
-.stats{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-
-gap:20px;
-
-padding:40px 20px;
-
-}
-
-.stat-box{
-
-background:#161b22;
-
-padding:25px;
-
-border-radius:18px;
-
-text-align:center;
-
-border:1px solid rgba(0,191,255,.25);
-
-box-shadow:0 0 15px rgba(0,191,255,.25);
-
-transition:.35s;
-
-}
-
-.stat-box:hover{
-
-transform:translateY(-8px);
-
-box-shadow:
-0 0 20px #00bfff,
-0 0 35px rgba(0,191,255,.5);
-
-}
-
-.stat-box h3{
-
-font-size:34px;
-
-color:#00bfff;
-
-margin-bottom:8px;
-
-}
-
-.stat-box p{
-
-color:#d8e9ff;
-
-}
-
-/* ===============================
-Latest News
-=============================== */
-
-.news{
-
-padding:60px 20px;
-
-}
-
-.news-container{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:22px;
-
-}
-
-.news-card{
-
-background:#161b22;
-
-padding:22px;
-
-border-radius:18px;
-
-border:1px solid rgba(0,191,255,.2);
-
-transition:.35s;
-
-}
-
-.news-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:
-0 0 22px #00bfff;
-
-}
-
-.news-card h3{
-
-margin-bottom:12px;
-
-color:#00d9ff;
-
-}
-/* ======================================
-   ⚔️ SlayerZone — Button + Anime Grid Fix
-====================================== */
-
-/* ==========================
-   ALL ANIME GRID
-========================== */
-
-.all-anime .anime-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(240px, 1fr));
-
-    gap:28px;
-
-    width:100%;
-
-    margin-top:35px;
-
-    align-items:stretch;
-
-}
-
-
-/* Anime Card */
-
-.all-anime .anime-card{
-
-    display:flex;
-
-    flex-direction:column;
-
-    height:100%;
-
-    overflow:hidden;
-
-    background:linear-gradient(
-        145deg,
-        #111a2d,
-        #19263c
-    );
-
-    border:1px solid rgba(0,191,255,.18);
-
-    border-radius:20px;
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease;
-
-}
-
-
-/* Card Hover */
-
-.all-anime .anime-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:rgba(0,229,255,.55);
-
-    box-shadow:
-        0 15px 35px rgba(0,191,255,.25);
-
-}
-
-
-/* Anime Image */
-
-.all-anime .anime-card img{
-
-    width:100%;
-
-    height:260px;
-
-    object-fit:cover;
-
-}
-
-
-/* Anime Title */
-
-.all-anime .anime-card h3{
-
-    padding:18px 18px 10px;
-
-    margin:0;
-
-    color:#fff;
-
-    font-size:1.15rem;
-
-}
-
-
-/* Buttons Area */
-
-.all-anime .anime-card button{
-
-    margin:6px 18px;
-
-}
-
-
-/* Last Button Bottom Alignment */
-
-.all-anime .anime-card button:last-child{
-
-    margin-bottom:20px;
-
-}
-
-
-/* ==========================
-   ALL BUTTONS
-========================== */
-
-button{
-
-    border:none;
-
-    outline:none;
-
-    font-family:inherit;
-
-    cursor:pointer;
-
-    user-select:none;
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        background .2s ease,
-        opacity .2s ease;
-
-}
-
-
-/* General Button */
-
-.card button,
-.anime-card button,
-.news-card button,
-.arena-btn,
-.hero-buttons button,
-.card-buttons button,
-.popup-buttons button,
-.footer-social button,
-.view-all-btn{
-
-    min-height:44px;
-
-    padding:11px 18px;
-
-    border-radius:12px;
-
-    font-size:14px;
-
-    font-weight:600;
-
-}
-
-
-/* Hover */
-
-button:hover{
-
-    transform:translateY(-2px);
-
-}
-
-
-/* Click */
-
-button:active{
-
-    transform:scale(.96);
-
-}
-
-
-/* ==========================
-   READ MORE
-========================== */
-
-.card button:first-of-type,
-.anime-card button:first-of-type,
-.news-card button{
-
-    background:linear-gradient(
-        135deg,
-        #00bfff,
-        #0077ff
-    );
-
-    color:#fff;
-
-    box-shadow:
-        0 6px 15px rgba(0,119,255,.22);
-
-}
-
-
-.card button:first-of-type:hover,
-.anime-card button:first-of-type:hover,
-.news-card button:hover{
-
-    box-shadow:
-        0 9px 22px rgba(0,191,255,.4);
-
-}
-
-
-/* ==========================
-   TRAILER BUTTON
-========================== */
-
-.card button:nth-of-type(2),
-.anime-card button:nth-of-type(2){
-
-    background:linear-gradient(
-        135deg,
-        #ff416c,
-        #ff1744
-    );
-
-    color:#fff;
-
-    box-shadow:
-        0 6px 15px rgba(255,23,68,.22);
-
-}
-
-
-.card button:nth-of-type(2):hover,
-.anime-card button:nth-of-type(2):hover{
-
-    box-shadow:
-        0 9px 22px rgba(255,23,68,.4);
-
-}
-
-
-/* ==========================
-   LIKE BUTTON
-========================== */
-
-.like-btn{
-
-    background:linear-gradient(
-        135deg,
-        #ff2d55,
-        #ff0066
-    ) !important;
-
-    color:#fff !important;
-
-}
-
-
-.like-btn:hover{
-
-    box-shadow:
-        0 8px 20px rgba(255,0,102,.35);
-
-}
-
-
-/* ==========================
-   HERO BUTTONS
-========================== */
-
-.hero-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:14px;
-
-    flex-wrap:wrap;
-
-}
-
-
-.hero-buttons button{
-
-    background:linear-gradient(
-        135deg,
-        #00bfff,
-        #0066ff
-    );
-
-    color:#fff;
-
-    padding:13px 24px;
-
-    box-shadow:
-        0 7px 20px rgba(0,119,255,.25);
-
-}
-
-
-.hero-buttons button:hover{
-
-    box-shadow:
-        0 10px 28px rgba(0,191,255,.4);
-
-}
-
-
-/* Recommend Me */
-
-.hero-buttons button:last-child{
-
-    background:linear-gradient(
-        135deg,
-        #7b2cff,
-        #c13cff
-    );
-
-}
-
-
-/* ==========================
-   POPULAR SECTION BUTTONS
-========================== */
-
-.view-all{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-
-    margin-top:35px;
-
-}
-
-
-.view-all-btn{
-
-    min-width:170px;
-
-    background:linear-gradient(
-        135deg,
-        #00bfff,
-        #0066ff
-    );
-
-    color:#fff;
-
-    box-shadow:
-        0 7px 18px rgba(0,119,255,.25);
-
-}
-
-
-.view-all-btn:first-child{
-
-    background:linear-gradient(
-        135deg,
-        #8a2be2,
-        #c23cff
-    );
-
-}
-
-
-/* ==========================
-   BATTLE ARENA BUTTON
-========================== */
-
-.arena-btn{
-
-    width:100%;
-
-    background:linear-gradient(
-        135deg,
-        #00bfff,
-        #0066ff
-    );
-
-    color:#fff;
-
-    box-shadow:
-        0 7px 18px rgba(0,119,255,.25);
-
-}
-
-
-.arena-btn:hover{
-
-    box-shadow:
-        0 10px 25px rgba(0,191,255,.4);
-
-}
-
-
-/* ==========================
-   QUIZ OPTIONS
-========================== */
-
-#quizOptions button{
-
-    width:100%;
-
-    padding:13px 16px;
-
-    background:#1b2940;
-
-    color:#fff;
-
-    border:1px solid rgba(0,191,255,.15);
-
-    border-radius:12px;
-
-}
-
-
-#quizOptions button:hover{
-
-    background:linear-gradient(
-        135deg,
-        #0077ff,
-        #00bfff
-    );
-
-}
-
-
-/* ==========================
-   SUBMIT ANSWER
-========================== */
-
-#submitAnswer{
-
-    width:100%;
-
-    padding:13px;
-
-    background:linear-gradient(
-        135deg,
-        #00e5ff,
-        #00aaff
-    );
-
-    color:#fff;
-
-    border-radius:12px;
-
-}
-
-
-/* ==========================
-   MUSIC BUTTON
-========================== */
-
-.music-btn,
-.theme-btn{
-
-    padding:10px 16px;
-
-    border-radius:12px;
-
-    background:#17243a;
-
-    color:#fff;
-
-    border:1px solid rgba(0,191,255,.2);
-
-}
-
-
-.music-btn:hover,
-.theme-btn:hover{
-
-    background:#00bfff;
-
-}
-
-
-/* ==========================
-   POPUP BUTTONS
-========================== */
-
-.popup-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:12px;
-
-    flex-wrap:wrap;
-
-}
-
-
-.popup-buttons button{
-
-    background:linear-gradient(
-        135deg,
-        #00bfff,
-        #0066ff
-    );
-
-    color:#fff;
-
-}
-
-
-/* ==========================
-   FOOTER BUTTONS
-========================== */
-
-.footer-social button{
-
-    width:100%;
-
-    background:#17243a;
-
-    color:#fff;
-
-    border:1px solid rgba(0,191,255,.15);
-
-}
-
-
-.footer-social button:hover{
-
-    background:linear-gradient(
-        135deg,
-        #00bfff,
-        #0066ff
-    );
-
-}
-
-
-/* ==========================
-   MOBILE
-========================== */
-
-@media(max-width:600px){
-
-    .all-anime .anime-grid{
-
-        grid-template-columns:
-        repeat(2, minmax(0,1fr));
-
-        gap:14px;
-
-    }
-
-
-    .all-anime .anime-card img{
-
-        height:190px;
-
-    }
-
-
-    .all-anime .anime-card h3{
-
-        font-size:.95rem;
-
-        padding:12px;
-
-    }
-
-
-    .all-anime .anime-card button{
-
-        margin:5px 10px;
-
-        padding:9px 8px;
-
-        font-size:12px;
-
-    }
-
-
-    .view-all{
-
-        gap:10px;
-
-    }
-
-
-    .view-all-btn{
-
-        min-width:145px;
-
-        padding:11px 14px;
-
-    }
-
-}
-
-
-/* Very Small Phones */
-
-@media(max-width:380px){
-
-    .all-anime .anime-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-} /* ==========================================
-   ⚔️ SLAYERZONE FINAL MOBILE + POPUP FIX
-========================================== */
-
-*{
-    box-sizing:border-box;
-}
-
-html{
-    width:100%;
-    overflow-x:hidden;
-    scroll-behavior:smooth;
-}
-
-body{
-    width:100%;
-    max-width:100%;
-    margin:0;
-    padding:0;
-    overflow-x:hidden;
-}
-
-
-/* ==========================================
-   🪟 ALL POPUPS
-========================================== */
-
-.popup{
-    position:fixed !important;
-    inset:0 !important;
-
-    width:100vw !important;
-    height:100vh !important;
-
-    display:none;
-
-    justify-content:center;
-    align-items:center;
-
-    padding:20px;
-
-    background:rgba(0,0,0,.78);
-
-    backdrop-filter:blur(8px);
-
-    z-index:99999 !important;
-}
-
-.popup.show{
-    display:flex !important;
-}
-
-
-/* ==========================================
-   WELCOME POPUP
-========================================== */
-
-#welcomePopup{
-    position:fixed !important;
-
-    top:0 !important;
-    left:0 !important;
-
-    width:100vw !important;
-    height:100vh !important;
-
-    display:none;
-
-    justify-content:center;
-    align-items:center;
-
-    z-index:100000 !important;
-}
-
-
-#welcomePopup .popup-content{
-
-    width:min(90%,420px);
-
-    padding:30px 24px;
-
-    text-align:center;
-
-    border-radius:24px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #101a2d,
-            #172742
-        );
-
-    border:1px solid rgba(0,191,255,.4);
-
-    box-shadow:
-        0 0 35px rgba(0,191,255,.25);
-
-}
-
-
-#welcomePopup h2{
-
-    margin:0 0 20px;
-
-    color:#00cfff;
-
-    font-size:26px;
-
-}
-
-
-#welcomePopup p{
-
-    color:#fff;
-
-    line-height:1.8;
-
-    font-size:16px;
-
-    margin-bottom:25px;
-
-}
-
-
-#welcomePopup button{
-
-    padding:13px 25px;
-
-    border-radius:14px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #00cfff,
-            #006eff
-        );
-
-    color:#fff;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    box-shadow:
-        0 8px 22px rgba(0,174,255,.3);
-
-}
-
-
-/* ==========================================
-   🪟 ANIME INFORMATION POPUP
-========================================== */
-
-#animePopup{
-
-    position:fixed !important;
-
-    inset:0 !important;
-
-    width:100vw !important;
-    height:100vh !important;
-
-    display:none;
-
-    justify-content:center;
-    align-items:center;
-
-    padding:20px;
-
-    background:rgba(0,0,0,.8);
-
-    backdrop-filter:blur(8px);
-
-    z-index:99998 !important;
-
-}
-
-
-#animePopup .popup-content{
-
-    position:relative;
-
-    width:min(92%,500px);
-
-    max-height:85vh;
-
-    overflow-y:auto;
-
-    padding:30px 24px;
-
-    border-radius:24px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #101a2d,
-            #182941
-        );
-
-    border:1px solid rgba(0,191,255,.4);
-
-    box-shadow:
-        0 0 40px rgba(0,191,255,.3);
-
-}
-
-
-#animePopup h2{
-
-    color:#00cfff;
-
-    margin-top:0;
-
-}
-
-
-#animePopup p{
-
-    color:#fff;
-
-    line-height:1.7;
-
-}
-
-
-#animePopup .close{
-
-    position:absolute;
-
-    top:12px;
-    right:12px;
-
-    width:40px;
-    height:40px;
-
-    padding:0;
-
-    border-radius:50%;
-
-    background:#ff1744;
-
-    color:#fff;
-
-    font-size:18px;
-
-}
-
-
-.popup-buttons{
-
-    display:flex;
-
-    gap:12px;
-
-    flex-wrap:wrap;
-
-    margin-top:20px;
-
-}
-
-
-.popup-buttons button{
-
-    flex:1;
-
-    min-width:140px;
-
-}
-
-
-/* ==========================================
-   🌟 COMING SOON
-========================================== */
-
-.future-section{
-
-    width:100%;
-
-    padding:60px 5%;
-
-}
-
-
-.future-section .cards{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(220px,1fr));
-
-    gap:22px;
-
-}
-
-
-.future-section .card{
-
-    padding:25px;
-
-    border-radius:20px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #111c30,
-            #17243a
-        );
-
-    border:1px solid rgba(0,191,255,.18);
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.2);
-
-    transition:.3s;
-
-}
-
-
-.future-section .card:hover{
-
-    transform:translateY(-6px);
-
-    border-color:#00cfff;
-
-    box-shadow:
-        0 12px 30px rgba(0,191,255,.2);
-
-}
-
-
-.future-section h3{
-
-    color:#fff;
-
-}
-
-
-.future-section p{
-
-    color:#d5d9e0;
-
-    line-height:1.6;
-
-}
-
-
-/* ==========================================
-   🎵 MUSIC PLAYER
-========================================== */
-
-.music-player{
-
-    padding:55px 5%;
-
-}
-
-
-.music-box{
-
-    max-width:600px;
-
-    margin:auto;
-
-    padding:25px;
-
-    border-radius:22px;
-
-    background:#111c30;
-
-    border:1px solid rgba(0,191,255,.2);
-
-}
-
-
-.music-info{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-}
-
-
-.music-info > span{
-
-    font-size:40px;
-
-}
-
-
-.music-info h3{
-
-    margin:0;
-
-    color:#fff;
-
-}
-
-
-.music-info p{
-
-    margin:5px 0 0;
-
-    color:#aaa;
-
-}
-
-
-#musicBtn{
-
-    margin-top:20px;
-
-    padding:12px 20px;
-
-    border-radius:12px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #00cfff,
-            #0077ff
-        );
-
-    color:#fff;
-
-    font-weight:700;
-
-}
-
-
-/* ==========================================
-   🔔 NOTIFICATION
-========================================== */
-
-.notification{
-
-    position:fixed;
-
-    top:20px;
-    right:20px;
-
-    max-width:320px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    padding:15px 18px;
-
-    border-radius:15px;
-
-    background:#17243a;
-
-    border:1px solid rgba(0,191,255,.3);
-
-    color:#fff;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.35);
-
-    transform:translateX(130%);
-
-    transition:.4s;
-
-    z-index:100001;
-
-}
-
-
-.notification.show{
-
-    transform:translateX(0);
-
-}
-
-
-.notification p{
-
-    margin:0;
-
-}
-
-
-/* ==========================================
-   🍞 TOAST
-========================================== */
-
-.toast{
-
-    position:fixed;
-
-    left:50%;
-    bottom:30px;
-
-    transform:
-        translate(-50%,120px);
-
-    padding:13px 20px;
-
-    border-radius:14px;
-
-    background:#16243a;
-
-    border:1px solid #00bfff;
-
-    color:#fff;
-
-    box-shadow:
-        0 8px 25px rgba(0,191,255,.25);
-
-    opacity:0;
-
-    transition:.35s;
-
-    z-index:100002;
-
-}
-
-
-.toast.show{
-
-    opacity:1;
-
-    transform:
-        translate(-50%,0);
-
-}
-
-
-/* ==========================================
-   ⬆️ TOP BUTTON
-========================================== */
-
-.top-btn{
-
-    position:fixed;
-
-    right:18px;
-    bottom:18px;
-
-    width:52px;
-    height:52px;
-
-    border-radius:50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #00cfff,
-            #0077ff
-        );
-
-    color:#fff;
-
-    font-size:22px;
-
-    box-shadow:
-        0 7px 20px rgba(0,191,255,.3);
-
-    z-index:9000;
-
-}
-
-
-/* ==========================================
-   🦶 FOOTER FIX
-========================================== */
-
-footer{
-
-    width:100%;
-
-    margin-top:50px;
-
-    padding:45px 5% 20px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #0b111d,
-            #070b13
-        );
-
-    border-top:1px solid rgba(0,191,255,.15);
-
-}
-
-
-.footer-container{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(200px,1fr));
-
-    gap:35px;
-
-    max-width:1100px;
-
-    margin:auto;
-
-}
-
-
-.footer-logo h2{
-
-    color:#fff;
-
-}
-
-
-.footer-logo p{
-
-    color:#aaa;
-
-}
-
-
-.footer-links{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
-}
-
-
-.footer-links h3,
-.footer-social h3{
-
-    color:#fff;
-
-    margin-top:0;
-
-}
-
-
-.footer-links a{
-
-    color:#cbd5e1 !important;
-
-    text-decoration:none !important;
-
-    font-size:15px;
-
-    transition:.2s;
-
-}
-
-
-.footer-links a:hover{
-
-    color:#00cfff !important;
-
-    transform:translateX(4px);
-
-}
-
-
-.footer-social{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
-}
-
-
-.footer-social button{
-
-    width:100%;
-
-    padding:13px;
-
-    border-radius:12px;
-
-    background:#17243a;
-
-    color:#fff;
-
-    border:1px solid rgba(0,191,255,.2);
-
-}
-
-
-.footer-social button:hover{
-
-    background:
-        linear-gradient(
-            135deg,
-            #00bfff,
-            #0066ff
-        );
-
-}
-
-
-footer hr{
-
-    border:0;
-
-    height:1px;
-
-    background:rgba(255,255,255,.1);
-
-    margin:35px 0 20px;
-
-}
-
-
-.copyright{
-
-    text-align:center;
-
-    color:#777;
-
-    font-size:13px;
-
-}
-
-
-/* ==========================================
-   📱 MOBILE FIX
-========================================== */
-
-@media(max-width:600px){
-
-    .future-section,
-    .music-player{
-
-        padding-left:5%;
-        padding-right:5%;
-
-    }
-
-
-    .future-section .cards{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .footer-container{
-
-        grid-template-columns:1fr;
-
-        gap:25px;
-
-    }
-
-
-    .popup{
-
-        padding:15px;
-
-    }
-
-
-    #welcomePopup .popup-content,
-    #animePopup .popup-content{
-
-        width:94%;
-
-        padding:25px 18px;
-
-    }
-
-
-    #welcomePopup h2{
-
-        font-size:22px;
-
-    }
-
-
-    .notification{
-
-        left:15px;
-        right:15px;
-
-        top:15px;
-
-        max-width:none;
-
-    }
-
-} /* ======================================
-   🧠 QUIZ / BATTLE / CHALLENGE POPUP
-====================================== */
-
-#quizPopup{
-    position:fixed !important;
-    inset:0 !important;
-
-    width:100vw !important;
-    height:100vh !important;
-
-    display:none;
-
-    justify-content:center !important;
-    align-items:center !important;
-
-    padding:20px;
-
-    background:rgba(0,0,0,.82);
-
-    backdrop-filter:blur(8px);
-
-    z-index:100000 !important;
-}
-
-#quizPopup.show{
-    display:flex !important;
-}
-
-#quizPopup .popup-content{
-    position:relative;
-
-    width:min(92%,480px);
-
-    max-height:85vh;
-
-    overflow-y:auto;
-
-    padding:28px 22px;
-
-    margin:auto;
-
-    border-radius:24px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #101a2d,
-            #182941
-        );
-
-    border:1px solid rgba(0,191,255,.4);
-
-    box-shadow:
-        0 15px 50px rgba(0,0,0,.55),
-        0 0 30px rgba(0,191,255,.18);
-
-    text-align:center;
-}
-
-
-/* Question */
-
-#quizQuestion{
-    color:#fff;
-
-    font-size:18px;
-
-    line-height:1.5;
-
-    margin:15px 0 20px;
-}
-
-
-/* Options */
-
-#quizOptions{
-    width:100%;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:12px;
-
-    margin-top:15px;
-}
-
-#quizOptions button{
-    width:100%;
-
-    min-height:48px;
-
-    padding:12px 15px;
-
-    border-radius:13px;
-
-    border:1px solid
-        rgba(0,191,255,.2);
-
-    background:#17263d;
-
-    color:#fff;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.2s;
-}
-
-#quizOptions button:hover{
-    background:
-        linear-gradient(
-            135deg,
-            #0077ff,
-            #00bfff
-        );
-
-    transform:translateY(-2px);
-}
-
-
-/* Type Answer */
-
-#answerInput{
-    width:100%;
-
-    padding:13px 15px;
-
-    margin-top:15px;
-
-    border-radius:12px;
-
-    border:1px solid
-        rgba(0,191,255,.3);
-
-    background:#0d1728;
-
-    color:#fff;
-
-    font-size:15px;
-
-    outline:none;
-}
-
-#answerInput:focus{
-    border-color:#00cfff;
-
-    box-shadow:
-        0 0 12px
-        rgba(0,191,255,.2);
-}
-
-
-/* Submit */
-
-#submitAnswer{
-    width:100%;
-
-    margin-top:12px;
-
-    padding:13px;
-
-    border-radius:12px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #00cfff,
-            #0077ff
-        );
-
-    color:#fff;
-
-    font-weight:700;
-
-    cursor:pointer;
-}
-
-
-/* Result */
-
-#quizResult{
-    min-height:25px;
-
-    margin-top:15px;
-
-    color:#fff;
-
-    font-weight:700;
-}
-
-
-/* Mobile */
-
-@media(max-width:600px){
-
-    #quizPopup{
-        padding:15px;
-    }
-
-    #quizPopup .popup-content{
-        width:94%;
-
-        max-height:88vh;
-
-        padding:24px 17px;
-    }
-
-    #quizQuestion{
-        font-size:16px;
-    }
-
-} /* ======================================
-   🎵 SLAYERZONE UNIQUE MUSIC BAR
-====================================== */
-
-.music-player-bar{
-    width:100%;
-    max-width:850px;
-
-    margin:25px auto;
-
-    padding:16px 20px;
-
-    display:flex;
-    align-items:center;
-    gap:16px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(15,25,45,.96),
-            rgba(8,14,27,.96)
-        );
-
-    border:1px solid rgba(0,191,255,.25);
-
-    border-radius:20px;
-
-    box-shadow:
-        0 10px 35px rgba(0,0,0,.35),
-        0 0 25px rgba(0,191,255,.08);
-
-    backdrop-filter:blur(12px);
-}
-
-.music-cover{
-    width:55px;
-    height:55px;
-
-    flex-shrink:0;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:15px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #00bfff,
-            #675cff
-        );
-
-    font-size:27px;
-
-    animation:musicPulse 2s infinite;
-}
-
-@keyframes musicPulse{
-
-    0%,100%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(1.06);
-    }
-
-}
-
-.music-details{
-    flex:1;
-    min-width:0;
-}
-
-.now-playing{
-    font-size:10px;
-    letter-spacing:2px;
-    color:#00cfff;
-    font-weight:700;
-}
-
-.music-details h3{
-    margin:5px 0 9px;
-
-    color:#fff;
-
-    font-size:15px;
-
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-}
-
-.music-progress{
-    width:100%;
-    height:4px;
-
-    background:rgba(255,255,255,.12);
-
-    border-radius:10px;
-
-    overflow:hidden;
-}
-
-.music-progress-fill{
-    width:0%;
-    height:100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            #00cfff,
-            #756cff
-        );
-
-    transition:width .2s linear;
-}
-
-.music-controls{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.music-controls button{
-    width:38px;
-    height:38px;
-
-    padding:0;
-
-    border-radius:50%;
-
-    border:1px solid
-        rgba(0,191,255,.2);
-
-    background:#142238;
-
-    color:#fff;
-
-    font-size:15px;
-
-    cursor:pointer;
-
-    transition:.2s;
-}
-
-.music-controls button:hover{
-    transform:scale(1.08);
-
-    background:#00aeea;
-}
-
-.music-controls .play-main{
-    width:46px;
-    height:46px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #00cfff,
-            #536dff
-        );
-
-    font-size:18px;
-
-    box-shadow:
-        0 0 18px
-        rgba(0,191,255,.25);
-}
-
-
-/* 📱 MOBILE */
-
-@media(max-width:600px){
-
-    .music-player-bar{
-        padding:13px;
-
-        gap:11px;
-
-        border-radius:17px;
-    }
-
-    .music-cover{
-        width:45px;
-        height:45px;
-
-        font-size:21px;
-    }
-
-    .music-controls{
-        gap:4px;
-    }
-
-    .music-controls button{
-        width:32px;
-        height:32px;
-
-        font-size:12px;
-    }
-
-    .music-controls .play-main{
-        width:40px;
-        height:40px;
-
-        font-size:15px;
-    }
-
-} /* ======================================
-   🎵 UNIQUE ANIME MUSIC SEEK BAR
-====================================== */
-
-.music-progress-area{
-    display:flex;
-    align-items:center;
-    gap:9px;
-
-    width:100%;
-}
-
-.music-progress-area span{
-    min-width:32px;
-
-    color:#8fa4bd;
-
-    font-size:10px;
-
-    font-variant-numeric:tabular-nums;
-}
-
-.music-seekbar{
-    position:relative;
-
-    flex:1;
-
-    height:22px;
-
-    display:flex;
-    align-items:center;
-}
-
-
-/* glowing track */
-
-.music-seekbar::before{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    right:0;
-
-    height:5px;
-
-    border-radius:20px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,191,255,.12),
-            rgba(120,90,255,.15)
-        );
-
-    box-shadow:
-        inset 0 0 5px rgba(0,0,0,.4);
-}
-
-
-/* progress */
-
-.music-progress-fill{
-    position:absolute;
-
-    left:0;
-
-    height:5px;
-
-    width:0%;
-
-    pointer-events:none;
-
-    border-radius:20px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #00eaff,
-            #6675ff,
-            #b85cff
-        );
-
-    box-shadow:
-        0 0 8px #00cfff,
-        0 0 18px rgba(100,100,255,.45);
-
-    transition:
-        width .08s linear;
-}
-
-
-/* draggable range */
-
-#musicSeek{
-    position:absolute;
-
-    left:0;
-
-    width:100%;
-
-    height:22px;
-
-    margin:0;
-
-    opacity:0;
-
-    cursor:pointer;
-
-    z-index:3;
-}
-
-
-/* glowing seek dot */
-
-.music-seekbar::after{
-    content:"";
-
-    position:absolute;
-
-    top:50%;
-    left:var(--progress, 0%);
-
-    width:11px;
-    height:11px;
-
-    transform:
-        translate(-50%,-50%);
-
-    border-radius:50%;
-
-    background:#fff;
-
-    border:3px solid #00d9ff;
-
-    box-shadow:
-        0 0 8px #00d9ff,
-        0 0 18px #596cff;
-
-    pointer-events:none;
-
-    z-index:2;
-}
-
-
-/* mobile */
-
-@media(max-width:600px){
-
-    .music-progress-area span{
-        font-size:9px;
-        min-width:27px;
-    }
-
-    .music-seekbar{
-        height:20px;
-    }
-
-} /* ==============================
-   🎬 ALL ANIME 2-COLUMN GRID
-================================ */
-
-.all-anime-grid,
-.anime-grid {
-    display: grid !important;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 20px;
-
-    width: 100%;
-
-    align-items: stretch;
-}
-
-
-/* Anime cards */
-
-.all-anime-grid .anime-card,
-.anime-grid .anime-card {
-    width: 100% !important;
-
-    min-width: 0;
-
-    margin: 0 !important;
-}
-
-
-/* 📱 Mobile */
-
-@media (max-width: 600px) {
-
-    .all-anime-grid,
-    .anime-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 12px;
-    }
-
-} /* ======================================
-   ⚔️ ALL ANIME — 2 × 2 GRID
-====================================== */
-
-.all-anime-section {
-    width: 100%;
-    padding: 35px 0;
-}
-
-.all-anime-section .title {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-
-/* GRID */
-
-.all-anime-grid {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 22px;
-
-    padding: 0 5px;
-}
-
-
-/* ANIME CARD */
-
-.all-anime-grid .anime-card {
-    position: relative;
-
-    width: 100%;
-
-    min-height: 230px;
-
-    overflow: hidden;
-
-    border-radius: 20px;
-
-    border: 1px solid
-        rgba(0, 191, 255, .18);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(18, 30, 52, .96),
-            rgba(7, 13, 25, .98)
-        );
-
-    box-shadow:
-        0 10px 30px
-        rgba(0, 0, 0, .28);
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
-}
-
-
-/* HOVER */
-
-.all-anime-grid .anime-card:hover {
-
-    transform:
-        translateY(-6px)
-        scale(1.015);
-
-    border-color:
-        rgba(0, 207, 255, .65);
-
-    box-shadow:
-        0 15px 35px
-        rgba(0, 191, 255, .16);
-}
-
-
-/* IMAGE */
-
-.all-anime-grid .anime-card img {
-
-    width: 100%;
-
-    height: 170px;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition:
-        transform .4s ease;
-}
-
-.all-anime-grid .anime-card:hover img {
-
-    transform: scale(1.06);
-
-}
-
-
-/* DARK IMAGE OVERLAY */
-
-.all-anime-grid .anime-card::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 45%;
-
-    pointer-events: none;
-
-    background:
-        linear-gradient(
-            transparent,
-            rgba(4, 8, 16, .95)
-        );
-
-}
-
-
-/* CARD CONTENT */
-
-.all-anime-grid .anime-card-content {
-
-    position: relative;
-
-    z-index: 2;
-
-    padding: 12px 15px 15px;
-
-}
-
-
-/* NUMBER BADGE */
-
-.all-anime-grid .anime-card::before {
-
-    content: attr(data-number);
-
-    position: absolute;
-
-    top: 10px;
-    left: 10px;
-
-    z-index: 4;
-
-    width: 30px;
-    height: 30px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 10px;
-
-    background:
-        rgba(0, 0, 0, .65);
-
-    border:
-        1px solid
-        rgba(0, 207, 255, .45);
-
-    color: #fff;
-
-    font-size: 13px;
-
-    font-weight: 800;
-
-    backdrop-filter: blur(8px);
-}
-
-
-/* 📱 MOBILE */
-
-@media (max-width: 600px) {
-
-    .all-anime-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 12px;
-
-    }
-
-    .all-anime-grid .anime-card {
-
-        min-height: 190px;
-
-        border-radius: 16px;
-
-    }
-
-    .all-anime-grid .anime-card img {
-
-        height: 135px;
-
-    }
-
-} /* =================================================
-   ⚔️ SLAYERZONE — PREMIUM GLASS POLISH
-   Subtle • Modern • Anime • Not Overdone
-================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap');
 
 :root{
-    --glass-bg:rgba(15,25,45,.58);
-    --glass-border:rgba(255,255,255,.10);
-    --cyan:#00cfff;
-    --purple:#806cff;
-    --soft-glow:rgba(0,207,255,.14);
+  --bg:#05070f;
+  --bg2:#0a1020;
+  --card:rgba(16,24,45,.72);
+  --stroke:rgba(255,255,255,.10);
+  --cyan:#00e5ff;
+  --blue:#4d7cff;
+  --purple:#8b6cff;
+  --pink:#ff4d8d;
+  --text:#f4f7ff;
+  --muted:#9aa8c2;
+  --shadow:0 20px 50px rgba(0,0,0,.45);
+  --radius:22px;
+  --glass:blur(18px);
 }
 
-
-/* ===============================
-   🌌 BACKGROUND
-=============================== */
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;width:100%;overflow-x:hidden}
 body{
-    background:
-        radial-gradient(
-            circle at 15% 10%,
-            rgba(0,191,255,.08),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 85% 25%,
-            rgba(128,108,255,.07),
-            transparent 30%
-        ),
-        #050912;
+  font-family:'Outfit',sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(0,229,255,.16), transparent 50%),
+    radial-gradient(900px 500px at 100% 0%, rgba(139,108,255,.18), transparent 45%),
+    radial-gradient(800px 400px at 50% 100%, rgba(255,77,141,.08), transparent 50%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;outline:none}
+
+body.light-theme{
+  --bg:#eef3ff;
+  --bg2:#ffffff;
+  --card:rgba(255,255,255,.78);
+  --stroke:rgba(20,40,80,.12);
+  --text:#101828;
+  --muted:#4b5875;
+  --shadow:0 16px 40px rgba(40,70,140,.12);
 }
 
+/* LOADING */
+#loadingScreen,.loading-screen{
+  position:fixed;inset:0;z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 30%, #12203a, #05070f 70%);
+  text-align:center;
+}
+.loader-box h2{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(28px,7vw,52px);
+  letter-spacing:1px;
+  background:linear-gradient(90deg,#fff,var(--cyan),var(--purple));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+#dice{font-size:42px;margin:14px 0;animation:pulse 1s infinite alternate}
+.loader-box p{color:var(--cyan);letter-spacing:2px;font-weight:600}
 
-/* ===============================
-   🧊 HEADER GLASS
-=============================== */
-
-.main-header,
-header{
-    background:rgba(7,14,27,.68) !important;
-
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-
-    border-bottom:
-        1px solid var(--glass-border);
-
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.22);
+@keyframes pulse{from{transform:scale(1)}to{transform:scale(1.18)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes glow{
+  from{text-shadow:0 0 12px rgba(0,229,255,.3)}
+  to{text-shadow:0 0 28px rgba(0,229,255,.7),0 0 50px rgba(139,108,255,.3)}
 }
 
-
-/* ===============================
-   ⚔️ LOGO
-=============================== */
-
-.logo,
-header h1{
-    text-shadow:
-        0 0 18px rgba(0,207,255,.25);
+/* HEADER */
+.main-header,header{
+  position:sticky;top:0;z-index:1000;
+  padding:14px 5%;
+  background:rgba(5,8,18,.72);
+  backdrop-filter:var(--glass);
+  border-bottom:1px solid var(--stroke);
+}
+.header-top{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;
+}
+.logo,header h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(22px,4vw,34px);
+  background:linear-gradient(90deg,#fff,var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.main-nav,nav{
+  display:flex;gap:8px;flex-wrap:wrap;justify-content:center;
+}
+.main-nav a,nav a{
+  padding:8px 14px;border-radius:999px;font-weight:600;font-size:14px;
+  color:var(--muted);transition:.25s;
+}
+.main-nav a:hover,nav a:hover{
+  color:#fff;background:rgba(0,229,255,.12);box-shadow:0 0 18px rgba(0,229,255,.15);
 }
 
-
-/* ===============================
-   🔎 SEARCH GLASS
-=============================== */
-
+.header-controls{
+  display:flex;align-items:center;justify-content:center;
+  gap:10px;flex-wrap:wrap;margin-top:12px;
+}
 .search-box{
-    background:
-        rgba(255,255,255,.035);
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    border-radius:16px;
-
-    padding:5px;
-
-    backdrop-filter:blur(12px);
+  display:flex;align-items:center;gap:8px;
+  padding:6px;border-radius:16px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--stroke);
+  min-width:min(100%,360px);
 }
-
 .search-box input{
-    background:transparent !important;
-    border:none !important;
+  flex:1;border:none;outline:none;background:transparent;
+  color:var(--text);padding:10px 12px;font-size:15px;
 }
-
-.search-box:focus-within{
-    border-color:
-        rgba(0,207,255,.4);
-
-    box-shadow:
-        0 0 20px
-        rgba(0,207,255,.08);
+.search-box button,#searchBtn,.music-btn,.theme-btn{
+  padding:10px 16px;border-radius:12px;font-weight:700;color:#fff;
+  background:linear-gradient(135deg,var(--cyan),var(--blue));
+  box-shadow:0 8px 20px rgba(0,180,255,.22);
+  transition:.2s;
 }
+.theme-btn{background:linear-gradient(135deg,var(--purple),var(--pink))}
+.search-box button:hover,.music-btn:hover,.theme-btn:hover{transform:translateY(-2px)}
+#liveClock{font-weight:800;color:var(--cyan);min-width:78px;text-align:center}
 
-
-/* ===============================
-   ✨ PREMIUM BUTTONS
-=============================== */
-
-button{
-    border:1px solid
-        rgba(255,255,255,.09);
-
-    border-radius:12px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0,191,255,.16),
-            rgba(128,108,255,.13)
-        );
-
-    backdrop-filter:blur(10px);
-
-    box-shadow:
-        0 5px 18px rgba(0,0,0,.18);
-}
-
-button:hover{
-    border-color:
-        rgba(0,207,255,.38);
-
-    box-shadow:
-        0 8px 24px
-        rgba(0,191,255,.12);
-
-    transform:translateY(-2px);
-}
-
-
-/* ===============================
-   🏠 HERO GLASS
-=============================== */
-
-.hero{
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0,191,255,.06),
-            rgba(128,108,255,.05)
-        );
-
-    border:
-        1px solid rgba(255,255,255,.07);
-
-    border-radius:28px;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.22);
-}
-
-
-/* subtle glow */
-
-.hero::before{
-    content:"";
-
-    position:absolute;
-
-    width:260px;
-    height:260px;
-
-    top:-130px;
-    right:-100px;
-
-    border-radius:50%;
-
-    background:
-        rgba(0,207,255,.10);
-
-    filter:blur(70px);
-
-    pointer-events:none;
-}
-
-
-/* ===============================
-   📊 STATS GLASS
-=============================== */
-
-.stat-box{
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.055),
-            rgba(255,255,255,.018)
-        ) !important;
-
-    border:
-        1px solid var(--glass-border);
-
-    backdrop-filter:blur(14px);
-
-    box-shadow:
-        0 12px 35px rgba(0,0,0,.20);
-}
-
-.stat-box:hover{
-    border-color:
-        rgba(0,207,255,.28);
-
-    transform:
-        translateY(-5px);
-}
-
-
-/* ===============================
-   🔥 ANIME CARDS
-=============================== */
-
-.anime-card,
-.card,
-.news-card{
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.055),
-            rgba(255,255,255,.018)
-        ) !important;
-
-    border:
-        1px solid var(--glass-border);
-
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-
-    box-shadow:
-        0 12px 35px rgba(0,0,0,.22);
-
-    overflow:hidden;
-}
-
-.anime-card:hover,
-.card:hover,
-.news-card:hover{
-    border-color:
-        rgba(0,207,255,.30);
-
-    box-shadow:
-        0 18px 45px
-        rgba(0,191,255,.10);
-
-    transform:
-        translateY(-6px);
-}
-
-
-/* ===============================
-   🖼️ IMAGE PREMIUM HOVER
-=============================== */
-
-.anime-card img,
-.card img,
-.news-card img{
-    transition:
-        transform .45s ease,
-        filter .45s ease;
-}
-
-.anime-card:hover img,
-.card:hover img,
-.news-card:hover img{
-    transform:scale(1.045);
-
-    filter:
-        brightness(1.08)
-        saturate(1.08);
-}
-
-
-/* ===============================
-   🎵 MUSIC PLAYER
-=============================== */
-
+/* MUSIC BAR */
 .music-player-bar{
-    background:
-        linear-gradient(
-            135deg,
-            rgba(10,20,38,.78),
-            rgba(25,18,50,.72)
-        ) !important;
-
-    border:
-        1px solid rgba(255,255,255,.11);
-
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-
-    box-shadow:
-        0 15px 45px rgba(0,0,0,.35),
-        0 0 25px rgba(0,191,255,.06);
+  width:min(920px,92%);
+  margin:18px auto;
+  padding:14px 16px;
+  display:flex;align-items:center;gap:14px;
+  background:linear-gradient(135deg,rgba(12,20,40,.9),rgba(20,14,40,.88));
+  border:1px solid var(--stroke);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  backdrop-filter:var(--glass);
+}
+.music-cover{
+  width:54px;height:54px;border-radius:16px;flex-shrink:0;
+  display:grid;place-items:center;font-size:26px;
+  background:linear-gradient(135deg,var(--cyan),var(--purple));
+  animation:pulse 2s infinite alternate;
+}
+.music-details{flex:1;min-width:0}
+.now-playing{font-size:10px;letter-spacing:2px;color:var(--cyan);font-weight:800}
+.music-details h3,#songName{
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  font-size:15px;margin:4px 0 8px;
+}
+.music-progress-area{display:flex;align-items:center;gap:8px}
+.music-progress-area span{font-size:11px;color:var(--muted);min-width:32px}
+.music-seekbar{position:relative;flex:1;height:22px;display:flex;align-items:center}
+.music-seekbar::before{
+  content:"";position:absolute;left:0;right:0;height:5px;border-radius:20px;
+  background:rgba(255,255,255,.12);
+}
+.music-progress-fill{
+  position:absolute;left:0;height:5px;width:0;border-radius:20px;
+  background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));
+  box-shadow:0 0 10px var(--cyan);
+}
+#musicSeek{position:absolute;inset:0;width:100%;opacity:0;cursor:pointer;z-index:2}
+.music-controls{display:flex;gap:6px}
+.music-controls button{
+  width:38px;height:38px;border-radius:50%;
+  background:#152238;color:#fff;border:1px solid var(--stroke);
+}
+.music-controls .play-main,#musicBtn.play-main{
+  width:46px;height:46px;
+  background:linear-gradient(135deg,var(--cyan),var(--purple));
 }
 
-
-/* ===============================
-   ⚔️ ARENA
-=============================== */
-
-.battle-arena{
-    position:relative;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(0,191,255,.045),
-            rgba(128,108,255,.045)
-        );
-
-    border:
-        1px solid rgba(255,255,255,.07);
-
-    border-radius:26px;
-
-    overflow:hidden;
+/* HERO */
+.hero{
+  width:min(1100px,92%);
+  margin:28px auto;
+  padding:42px 22px 36px;
+  text-align:center;
+  border-radius:32px;
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,rgba(0,229,255,.08),rgba(139,108,255,.07));
+  border:1px solid var(--stroke);
+  box-shadow:var(--shadow);
+}
+.hero::before{
+  content:"";position:absolute;width:280px;height:280px;right:-80px;top:-90px;
+  background:rgba(0,229,255,.16);filter:blur(70px);pointer-events:none;
+}
+.hero h2{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(28px,6vw,56px);
+  animation:glow 2.4s infinite alternate;
+}
+.hero p{color:var(--muted);font-size:clamp(15px,2.4vw,20px);margin:8px 0 18px}
+.hero-status{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+#score,#level{
+  padding:8px 14px;border-radius:12px;
+  background:rgba(255,255,255,.06);border:1px solid var(--stroke);font-weight:700;
+}
+.slider{display:flex;justify-content:center}
+.banner,#sliderImage{
+  width:92%;max-width:920px;border-radius:22px;
+  border:2px solid rgba(0,229,255,.35);
+  box-shadow:0 0 40px rgba(0,229,255,.18);
+  animation:float 5s ease-in-out infinite;
+}
+.hero-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+.hero-buttons button,.view-all-btn,.all-anime-btn,.arena-btn,.card-buttons button,.popup-buttons button{
+  padding:13px 22px;border-radius:14px;font-weight:800;color:#fff;
+  background:linear-gradient(135deg,var(--cyan),var(--blue));
+  box-shadow:0 10px 24px rgba(0,150,255,.25);transition:.2s;
+}
+.hero-buttons button:last-child,.all-anime-btn{
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+}
+.hero-buttons button:hover,.view-all-btn:hover,.all-anime-btn:hover,.arena-btn:hover{
+  transform:translateY(-3px) scale(1.03);
 }
 
-.battle-arena::after{
-    content:"";
-
-    position:absolute;
-
-    width:180px;
-    height:180px;
-
-    right:-70px;
-    bottom:-80px;
-
-    background:
-        rgba(128,108,255,.10);
-
-    filter:blur(65px);
-
-    pointer-events:none;
+/* STATS */
+.stats{
+  width:min(1100px,92%);margin:10px auto 30px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;
 }
-
-
-/* ===============================
-   🪟 POPUPS
-=============================== */
-
-.popup,
-.quiz-popup{
-    background:
-        rgba(0,0,0,.68) !important;
-
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+.stat-box{
+  padding:22px 16px;text-align:center;border-radius:var(--radius);
+  background:var(--card);border:1px solid var(--stroke);
+  backdrop-filter:var(--glass);transition:.25s;
 }
+.stat-box:hover{transform:translateY(-6px);border-color:rgba(0,229,255,.4)}
+.stat-box h3{font-size:32px;color:var(--cyan)}
 
-.popup-content,
-.quiz-box{
-    background:
-        linear-gradient(
-            145deg,
-            rgba(18,30,52,.88),
-            rgba(12,18,34,.90)
-        ) !important;
-
-    border:
-        1px solid rgba(255,255,255,.11);
-
-    backdrop-filter:blur(22px);
-    -webkit-backdrop-filter:blur(22px);
-
-    box-shadow:
-        0 25px 80px rgba(0,0,0,.48),
-        0 0 35px rgba(0,191,255,.07);
-
-    border-radius:24px;
-}
-
-
-/* ===============================
-   🏆 SCORE / LEVEL
-=============================== */
-
-#score,
-#level{
-    background:
-        rgba(255,255,255,.045);
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(10px);
-
-    border-radius:12px;
-
-    box-shadow:
-        0 6px 20px rgba(0,0,0,.15);
-}
-
-
-/* ===============================
-   🔔 TOAST / NOTIFICATION
-=============================== */
-
-#toast,
-#notification{
-    background:
-        rgba(12,22,40,.82) !important;
-
-    border:
-        1px solid rgba(0,207,255,.20);
-
-    backdrop-filter:blur(18px);
-
-    box-shadow:
-        0 12px 35px rgba(0,0,0,.30),
-        0 0 20px rgba(0,191,255,.08);
-}
-
-
-/* ===============================
-   🦶 FOOTER
-=============================== */
-
-footer{
-    background:
-        linear-gradient(
-            180deg,
-            rgba(8,14,27,.72),
-            rgba(4,8,16,.94)
-        ) !important;
-
-    border-top:
-        1px solid rgba(255,255,255,.07);
-
-    backdrop-filter:blur(15px);
-}
-
-
-/* ===============================
-   ✨ SECTION TITLES
-=============================== */
-
+/* TITLES */
 .title{
-    text-shadow:
-        0 0 20px
-        rgba(0,207,255,.12);
+  text-align:center;font-family:'Syne',sans-serif;
+  font-size:clamp(24px,4vw,38px);margin:18px 0 8px;
+}
+.title::after{
+  content:"";display:block;width:84px;height:4px;margin:10px auto 22px;
+  border-radius:20px;background:linear-gradient(90deg,var(--cyan),var(--purple));
+}
+.section-subtitle{text-align:center;color:var(--muted);margin-bottom:18px}
+
+/* NEWS */
+.news,.popular,.anime-day,.battle-arena{width:min(1100px,92%);margin:0 auto 40px}
+.news-container,.cards{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;
+}
+.news-card,.card,.arena-card{
+  padding:20px;border-radius:var(--radius);
+  background:var(--card);border:1px solid var(--stroke);
+  backdrop-filter:var(--glass);transition:.25s;
+}
+.news-card:hover,.card:hover{transform:translateY(-7px);border-color:rgba(0,229,255,.4)}
+.news-card h3,.card h3{margin-bottom:8px}
+.news-card button,.card button{
+  margin-top:12px;width:100%;padding:11px;border-radius:12px;font-weight:700;color:#fff;
+  background:linear-gradient(135deg,var(--cyan),var(--blue));
 }
 
+/* ANIME GRIDS */
+.anime-grid,.popular-grid,.all-anime-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;
+}
+.anime-card,.anime-mini-card{
+  position:relative;overflow:hidden;border-radius:20px;
+  background:var(--card);border:1px solid var(--stroke);
+  box-shadow:var(--shadow);transition:.25s;
+}
+.anime-card:hover,.anime-mini-card:hover{
+  transform:translateY(-8px) scale(1.015);
+  border-color:rgba(0,229,255,.5);
+}
+.anime-card img,.anime-mini-card img,.anime-image img,.day-card img{
+  width:100%;height:190px;object-fit:cover;transition:.4s;
+}
+.anime-card:hover img,.anime-mini-card:hover img{transform:scale(1.07)}
+.anime-card-content,.anime-mini-card{padding:12px 14px 16px}
+.anime-mini-card{padding-bottom:14px}
+.anime-mini-card h3,.anime-card h3{margin:8px 0 6px;font-size:16px}
+.anime-tag{
+  display:inline-block;font-size:11px;padding:4px 8px;border-radius:999px;
+  background:rgba(0,229,255,.12);color:var(--cyan);font-weight:700;
+}
+.anime-number{
+  position:absolute;top:10px;left:10px;z-index:2;
+  width:30px;height:30px;display:grid;place-items:center;
+  border-radius:10px;background:rgba(0,0,0,.55);border:1px solid rgba(0,229,255,.4);
+  font-weight:800;font-size:12px;
+}
+.anime-card button,.anime-mini-card button{
+  width:calc(100% - 0px);margin-top:8px;padding:10px;border-radius:12px;
+  font-weight:700;color:#fff;background:linear-gradient(135deg,var(--cyan),var(--blue));
+}
+.anime-card button:nth-of-type(2),.card-buttons button:nth-of-type(2){
+  background:linear-gradient(135deg,var(--pink),#ff1744);
+}
+.like-btn{background:linear-gradient(135deg,#ff2d55,#ff0066)!important}
+.view-all{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+.all-anime-btn{display:block;margin:22px auto 0;width:min(280px,90%)}
 
-/* ===============================
-   📱 MOBILE — KEEP CLEAN
-=============================== */
+/* ARENA */
+.battle-arena{
+  padding:28px 18px;border-radius:28px;
+  background:linear-gradient(135deg,rgba(0,229,255,.05),rgba(139,108,255,.06));
+  border:1px solid var(--stroke);
+}
+.arena-text{text-align:center;color:var(--muted);margin-bottom:18px}
+.arena-icon{font-size:36px;text-align:center}
+.arena-btn{width:100%;margin-top:12px}
 
-@media(max-width:600px){
+/* DAY CARD */
+.day-card{
+  display:grid;grid-template-columns:1.1fr 1.2fr;gap:18px;align-items:center;
+  background:var(--card);border:1px solid var(--stroke);border-radius:24px;overflow:hidden;
+}
+.day-card img{height:100%;min-height:240px;object-fit:cover}
+.day-content{padding:18px}
+.card-buttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.card-buttons button{flex:1;min-width:120px}
 
-    .hero,
-    .battle-arena{
-        border-radius:20px;
-    }
+/* POPUPS */
+.popup,#welcomePopup,#animePopup,#allAnimePopup,#quizPopup,.quiz-popup{
+  position:fixed;inset:0;z-index:10000;
+  display:none;align-items:center;justify-content:center;
+  padding:18px;background:rgba(0,0,0,.78);backdrop-filter:blur(10px);
+}
+.popup.show,#quizPopup.show{display:flex!important}
+.popup-content,.quiz-box{
+  width:min(92%,520px);max-height:85vh;overflow:auto;
+  padding:26px 22px;border-radius:24px;position:relative;
+  background:linear-gradient(160deg,#101a2e,#18253f);
+  border:1px solid rgba(0,229,255,.28);
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
+}
+.all-anime-popup{width:min(94%,860px)}
+.popup-content h2,#animeTitle,#quizTitle{color:var(--cyan);margin-bottom:8px}
+.close,.close-btn,.popup-close{
+  position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;
+  background:#ff1744;color:#fff;font-size:18px;
+}
+.popup-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.popup-buttons button{flex:1}
 
-    .anime-card,
-    .card,
-    .news-card{
-        backdrop-filter:blur(9px);
-    }
+/* QUIZ */
+#quizQuestion{font-size:18px;margin:12px 0 16px}
+#quizOptions{display:flex;flex-direction:column;gap:10px}
+#quizOptions button{
+  width:100%;padding:12px;border-radius:13px;text-align:left;color:#fff;
+  background:#17263d;border:1px solid rgba(0,229,255,.18);font-weight:700;
+}
+#quizOptions button:hover{background:linear-gradient(135deg,var(--blue),var(--cyan))}
+#answerInput{
+  width:100%;margin-top:12px;padding:12px 14px;border-radius:12px;
+  border:1px solid rgba(0,229,255,.3);background:#0d1728;color:#fff;
+}
+#submitAnswer{
+  width:100%;margin-top:10px;padding:13px;border-radius:12px;font-weight:800;color:#fff;
+  background:linear-gradient(135deg,var(--cyan),var(--blue));
+}
+#quizResult{min-height:24px;margin-top:12px;font-weight:800}
 
-    button:hover{
-        transform:none;
-    }
-
-/* ⚔️ CLEAN LOADING SCREEN */
-
-#loadingScreen {
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 100vh;
-
-    background: #050d18;
-
-    text-align: center;
-    overflow: hidden;
+/* TOAST / TOP */
+.toast,#toast{
+  position:fixed;left:50%;bottom:24px;transform:translate(-50%,80px);
+  padding:12px 18px;border-radius:14px;background:#16243a;
+  border:1px solid var(--cyan);opacity:0;transition:.35s;z-index:100002;
+}
+.toast.show,#toast.show{opacity:1;transform:translate(-50%,0)}
+.notification,#notification{
+  position:fixed;top:18px;right:18px;max-width:320px;
+  padding:14px 16px;border-radius:14px;background:#17243a;
+  border:1px solid rgba(0,229,255,.3);transform:translateX(130%);
+  transition:.4s;z-index:100001;
+}
+.notification.show{transform:translateX(0)}
+.top-btn{
+  position:fixed;right:16px;bottom:16px;width:50px;height:50px;border-radius:50%;
+  background:linear-gradient(135deg,var(--cyan),var(--blue));color:#fff;font-size:22px;
+  box-shadow:0 8px 22px rgba(0,229,255,.3);z-index:9000;display:none;
 }
 
-#loadingScreen .loading-welcome {
-    font-size: clamp(28px, 8vw, 60px);
-    font-weight: 900;
-    letter-spacing: 2px;
-    line-height: 1.2;
+footer{margin-top:40px;padding:28px 5%;text-align:center;color:var(--muted);border-top:1px solid var(--stroke)}
 
-    color: white;
-
-    margin: 15px 20px;
+@media(max-width:700px){
+  .day-card{grid-template-columns:1fr}
+  .day-card img{min-height:180px;height:180px}
+  .anime-card img,.anime-mini-card img{height:150px}
+  .music-player-bar{padding:12px}
+  .hero{padding:28px 14px}
+  .main-header,header{padding:12px 4%}
 }
-
-#loadingScreen .loading-text {
-    font-size: clamp(16px, 4vw, 24px);
-    color: #00bfff;
-
-    margin-top: 15px;
-}
-
-#loadingScreen::before {
-    content: "⚔️";
-    font-size: 65px;
-    margin-bottom: 15px;
-
-    animation: swordPulse 1s infinite alternate;
-}
-
-@keyframes swordPulse {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.15);
-    }
-} /* 🔥 POPULAR ANIME GRID */
-
-.popular-anime .anime-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    padding: 10px;
-}
-
-.popular-anime .anime-card {
-    width: 100%;
-    margin: 0;
-}
-
-@media (max-width: 600px) {
-    .popular-anime .anime-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-        padding: 8px;
-    }
-} 
-/* 🔥 FEATURED 4 ANIME — 2×2 */
-
-.featured-anime .anime-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    padding: 10px;
-}
-
-.featured-anime .anime-card {
-    width: 100%;
-    margin: 0;
-}
-
-@media (max-width: 600px) {
-    .featured-anime .anime-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-    }
-}
+@media(max-width:380px){
+  .anime-grid,.popular-grid,.all-anime-grid{grid-template-columns:1fr}
+      }
