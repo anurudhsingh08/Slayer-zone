@@ -1355,3 +1355,21 @@
     init();
   }
 })();
+
+/* ======================================
+   ⚔️ ANIME EFFECTS — SAFE INIT
+====================================== */
+
+function initAnimeEffects() {
+
+    const effects = document.querySelectorAll(".anime-effects .effect");
+
+    if (!effects.length) return;
+
+    effects.forEach((effect, index) => {
+        effect.style.animationDelay = `${index * -0.8}s`;
+    });
+
+}
+
+document.addEventListener("DOMContentLoaded", initAnimeEffects);
