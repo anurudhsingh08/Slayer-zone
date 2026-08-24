@@ -608,3 +608,151 @@ footer{margin-top:40px;padding:28px 5%;text-align:center;color:var(--muted);bord
         display: none;
     }
   }
+
+/* ======================================
+   ⚔️ ANIME ELEMENT BORDER EFFECTS
+====================================== */
+
+.anime-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Animated border */
+.anime-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+
+    border-radius: inherit;
+
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        #00bfff,
+        transparent,
+        #00bfff,
+        transparent
+    );
+
+    animation: waterBorder 4s linear infinite;
+
+    z-index: -2;
+}
+
+/* Inner surface */
+.anime-card::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+
+    border-radius: inherit;
+    background: inherit;
+
+    z-index: -1;
+}
+
+@keyframes waterBorder {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 🌊 Demon Slayer */
+.anime-card.water-effect::before {
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        #00aaff,
+        #006eff,
+        transparent,
+        #00d9ff,
+        transparent
+    );
+
+    animation: waterBorder 3.5s linear infinite;
+}
+
+/* 🟣 JJK / Cursed Energy */
+.anime-card.cursed-effect::before {
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        #7c3aed,
+        #d946ef,
+        #4c1d95,
+        transparent
+    );
+
+    animation: cursedBorder 2.8s linear infinite;
+}
+
+@keyframes cursedBorder {
+    0% {
+        transform: rotate(0deg);
+        filter: drop-shadow(0 0 3px #7c3aed);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 14px #a855f7);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: drop-shadow(0 0 3px #7c3aed);
+    }
+}
+
+/* 🌫️ Mist */
+.anime-card.mist-effect::before {
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        #cbd5e1,
+        #94a3b8,
+        transparent,
+        #e2e8f0,
+        transparent
+    );
+
+    animation: mistBorder 5s linear infinite;
+}
+
+@keyframes mistBorder {
+    0%, 100% {
+        opacity: .45;
+    }
+
+    50% {
+        opacity: .9;
+    }
+}
+
+/* 🔥 Flame */
+.anime-card.flame-effect::before {
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        #ff3d00,
+        #ff8a00,
+        #ffcc00,
+        transparent
+    );
+
+    animation: flameBorder 2s linear infinite;
+}
+
+@keyframes flameBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 12px #ff5a00);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
