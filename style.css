@@ -392,3 +392,493 @@ footer{margin-top:40px;padding:28px 5%;text-align:center;color:var(--muted);bord
 @media(max-width:380px){
   .anime-grid,.popular-grid,.all-anime-grid{grid-template-columns:1fr}
       }
+
+/* =========================================
+   SLAYERZONE ANIME BREATHING BORDERS
+========================================= */
+
+.anime-card,
+.card,
+.anime-box,
+.news-card,
+.character-card,
+.featured-card,
+.arena-card,
+.stat-card {
+  --anime-color: #38bdf8;
+  --anime-glow: rgba(56, 189, 248, 0.35);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid transparent !important;
+  border-radius: 18px;
+  background: #0b1020;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Rotating animated border */
+.anime-card::before,
+.card::before,
+.anime-box::before,
+.news-card::before,
+.character-card::before,
+.featured-card::before,
+.arena-card::before,
+.stat-card::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: -70%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 55deg,
+    var(--anime-color) 100deg,
+    transparent 145deg,
+    transparent 360deg
+  );
+  animation: slayerBorderRotate 8s linear infinite;
+}
+
+/* Inner dark layer */
+.anime-card::after,
+.card::after,
+.anime-box::after,
+.news-card::after,
+.character-card::after,
+.featured-card::after,
+.arena-card::after,
+.stat-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 2px;
+  border-radius: 16px;
+  background: #0b1020;
+}
+
+/* Hover glow */
+.anime-card:hover,
+.card:hover,
+.anime-box:hover,
+.news-card:hover,
+.character-card:hover,
+.featured-card:hover,
+.arena-card:hover,
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 12px var(--anime-glow),
+    0 0 30px var(--anime-glow),
+    0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes slayerBorderRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   WATER BREATHING - DEMON SLAYER
+========================================= */
+
+.water-breathing,
+.demon-slayer {
+  --anime-color: #38bdf8;
+  --anime-glow: rgba(14, 165, 233, 0.42);
+  background: #071923 !important;
+}
+
+.water-breathing::before,
+.demon-slayer::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #075985,
+    #0ea5e9,
+    #7dd3fc,
+    transparent 115deg,
+    transparent
+  );
+
+  animation-duration: 9s;
+}
+
+.water-breathing::after,
+.demon-slayer::after {
+  background:
+    radial-gradient(
+      ellipse at bottom,
+      rgba(14, 165, 233, 0.16),
+      transparent 60%
+    ),
+    #071923;
+}
+
+/* =========================================
+   CURSED ENERGY - JUJUTSU KAISEN
+========================================= */
+
+.cursed-energy,
+.jujutsu-kaisen {
+  --anime-color: #a855f7;
+  --anime-glow: rgba(168, 85, 247, 0.45);
+  background: #130d20 !important;
+}
+
+.cursed-energy::before,
+.jujutsu-kaisen::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #4c1d95,
+    #7e22ce,
+    #c084fc,
+    transparent 105deg,
+    transparent
+  );
+
+  animation-duration: 6s;
+}
+
+/* =========================================
+   HOLLOW PURPLE - SPECIAL CARD ONLY
+========================================= */
+
+.hollow-purple {
+  --anime-color: #e879f9;
+  --anime-glow: rgba(217, 70, 239, 0.65);
+  background: #180d27 !important;
+}
+
+.hollow-purple::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #312e81,
+    #7e22ce,
+    #c026d3,
+    #f0abfc,
+    transparent 90deg,
+    transparent
+  );
+
+  animation-duration: 4s;
+}
+
+.hollow-purple::after {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(192, 132, 252, 0.18),
+      transparent 65%
+    ),
+    #180d27;
+}
+
+/* =========================================
+   FLAME BREATHING - DEMON SLAYER
+========================================= */
+
+.flame-breathing,
+.fire-breathing {
+  --anime-color: #f97316;
+  --anime-glow: rgba(249, 115, 22, 0.48);
+  background: #211007 !important;
+}
+
+.flame-breathing::before,
+.fire-breathing::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #991b1b,
+    #ef4444,
+    #f97316,
+    #facc15,
+    transparent 110deg,
+    transparent
+  );
+
+  animation-duration: 5s;
+}
+
+.flame-breathing::after,
+.fire-breathing::after {
+  background:
+    radial-gradient(
+      ellipse at bottom,
+      rgba(249, 115, 22, 0.2),
+      transparent 65%
+    ),
+    #211007;
+}
+
+/* =========================================
+   THUNDER BREATHING - YELLOW FLASH
+========================================= */
+
+.thunder-breathing,
+.naruto,
+.blue-lock {
+  --anime-color: #facc15;
+  --anime-glow: rgba(250, 204, 21, 0.4);
+  background: #171507 !important;
+}
+
+.thunder-breathing::before,
+.naruto::before,
+.blue-lock::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 235deg,
+    #fef08a 260deg,
+    #facc15 275deg,
+    transparent 300deg,
+    transparent
+  );
+
+  animation-duration: 3s;
+}
+
+/* =========================================
+   CHAKRA STYLE - NARUTO
+========================================= */
+
+.chakra {
+  --anime-color: #fb923c;
+  --anime-glow: rgba(249, 115, 22, 0.4);
+  background: #1c1008 !important;
+}
+
+.chakra::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #c2410c,
+    #f97316,
+    #fdba74,
+    transparent 110deg,
+    transparent
+  );
+
+  animation-duration: 7s;
+}
+
+/* =========================================
+   HAKI / OCEAN STYLE - ONE PIECE
+========================================= */
+
+.haki,
+.one-piece {
+  --anime-color: #fbbf24;
+  --anime-glow: rgba(251, 191, 36, 0.4);
+  background: #151208 !important;
+}
+
+.haki::before,
+.one-piece::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #92400e,
+    #f59e0b,
+    #fef3c7,
+    transparent 120deg,
+    transparent
+  );
+
+  animation-duration: 8s;
+}
+
+/* =========================================
+   SOUL REAPER STYLE - BLEACH
+========================================= */
+
+.soul-reaper,
+.bleach {
+  --anime-color: #e5e7eb;
+  --anime-glow: rgba(229, 231, 235, 0.3);
+  background: #101116 !important;
+}
+
+.soul-reaper::before,
+.bleach::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #475569,
+    #e5e7eb,
+    #94a3b8,
+    transparent 110deg,
+    transparent
+  );
+
+  animation-duration: 10s;
+}
+
+/* =========================================
+   SHADOW STYLE - SOLO LEVELING
+========================================= */
+
+.shadow-energy,
+.solo-leveling {
+  --anime-color: #7c3aed;
+  --anime-glow: rgba(124, 58, 237, 0.5);
+  background: #0e0b1a !important;
+}
+
+.shadow-energy::before,
+.solo-leveling::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #1e1b4b,
+    #4c1d95,
+    #7c3aed,
+    transparent 105deg,
+    transparent
+  );
+
+  animation-duration: 7s;
+}
+
+/* =========================================
+   MIST BREATHING
+========================================= */
+
+.mist-breathing {
+  --anime-color: #cbd5e1;
+  --anime-glow: rgba(203, 213, 225, 0.25);
+  background: #111827 !important;
+}
+
+.mist-breathing::before {
+  filter: blur(1px);
+
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #64748b,
+    #cbd5e1,
+    transparent 110deg,
+    transparent
+  );
+
+  animation-duration: 12s;
+}
+
+/* =========================================
+   SECTION TITLES
+========================================= */
+
+section h2,
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+section h2::after,
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #ef4444,
+    #a855f7,
+    transparent
+  );
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  animation: titleLine 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleLine {
+  from {
+    width: 35%;
+    opacity: 0.55;
+  }
+
+  to {
+    width: 70%;
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   BUTTON EFFECT
+========================================= */
+
+button,
+.btn,
+.explore-btn {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+button:hover,
+.btn:hover,
+.explore-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 12px rgba(239, 68, 68, 0.5),
+    0 0 25px rgba(168, 85, 247, 0.25);
+}
+
+/* =========================================
+   MOBILE OPTIMIZATION
+========================================= */
+
+@media (max-width: 700px) {
+  .anime-card:hover,
+  .card:hover,
+  .anime-box:hover,
+  .news-card:hover,
+  .character-card:hover,
+  .featured-card:hover,
+  .arena-card:hover,
+  .stat-card:hover {
+    transform: none;
+  }
+
+  .anime-card::before,
+  .card::before,
+  .anime-box::before,
+  .news-card::before,
+  .character-card::before,
+  .featured-card::before,
+  .arena-card::before,
+  .stat-card::before {
+    animation-duration: 12s;
+  }
+
+  section h2::after,
+  .section-title::after {
+    animation: none;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION SUPPORT
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  }
