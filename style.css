@@ -882,3 +882,165 @@ button:hover,
     scroll-behavior: auto !important;
   }
   }
+
+/* =====================================
+   SLAYERZONE FULL WEBSITE OUTER BORDER
+===================================== */
+
+:root {
+  --frame-size: 5px;
+  --frame-speed: 9s;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Main animated frame */
+body::before {
+  content: "";
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  inset: 0;
+
+  padding: var(--frame-size);
+
+  background: conic-gradient(
+    from 0deg,
+    #07111f 0deg,
+    #1687c9 35deg,
+    #7dd3fc 65deg,
+    #07111f 100deg,
+
+    #07111f 130deg,
+    #facc15 160deg,
+    #fff7ae 180deg,
+    #07111f 205deg,
+
+    #07111f 235deg,
+    #ef4444 270deg,
+    #f97316 300deg,
+    #facc15 325deg,
+    #07111f 350deg,
+
+    #07111f 360deg
+  );
+
+  animation: slayerUniverseBorder var(--frame-speed) linear infinite;
+
+  /* Center transparent, only outer frame visible */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Soft outer aura */
+body::after {
+  content: "";
+  position: fixed;
+  z-index: 9998;
+  pointer-events: none;
+  inset: 0;
+
+  border: 2px solid rgba(56, 189, 248, 0.22);
+
+  box-shadow:
+    inset 0 0 18px rgba(56, 189, 248, 0.22),
+    inset 0 0 45px rgba(168, 85, 247, 0.12),
+    0 0 18px rgba(239, 68, 68, 0.18);
+
+  animation: slayerAura 4s ease-in-out infinite alternate;
+}
+
+/* Border rotation */
+@keyframes slayerUniverseBorder {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Soft breathing glow */
+@keyframes slayerAura {
+  from {
+    opacity: 0.45;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =====================================
+   TOP / BOTTOM FLOWING WATER
+===================================== */
+
+body {
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(14, 165, 233, 0.035),
+      transparent
+    );
+  background-size: 220% 100%;
+  animation: waterFlow 14s ease-in-out infinite;
+}
+
+@keyframes waterFlow {
+  0%, 100% {
+    background-position: 0% 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+/* =====================================
+   THUNDER FLASH - OCCASIONAL SHARP EFFECT
+===================================== */
+
+body::before {
+  filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.75));
+}
+
+/* =====================================
+   MOBILE VERSION
+===================================== */
+
+@media (max-width: 700px) {
+  :root {
+    --frame-size: 3px;
+    --frame-speed: 13s;
+  }
+
+  body::after {
+    box-shadow:
+      inset 0 0 12px rgba(56, 189, 248, 0.18),
+      0 0 10px rgba(239, 68, 68, 0.12);
+  }
+}
+
+/* Accessibility: reduce animation if user prefers less motion */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body::before,
+  body::after {
+    animation: none !important;
+  }
+
+  body::before {
+    background: linear-gradient(
+      90deg,
+      #1687c9,
+      #a855f7,
+      #ef4444
+    );
+  }
+}
