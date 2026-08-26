@@ -150,3 +150,70 @@ button{font-family:inherit;cursor:pointer;border:none}
 @media(max-width:380px){
   .anime-grid,.popular-grid,.all-anime-grid{grid-template-columns:1fr}
   }
+
+/* ===== Breathing borders (edge only) ===== */
+.anime-card,
+.anime-mini-card,
+.news-card,
+.day-card{
+  position:relative;
+  overflow:hidden;
+}
+.anime-card::before,
+.anime-mini-card::before,
+.news-card::before,
+.day-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  padding:2px;
+  background:conic-gradient(from 0deg, transparent 0 60%, #3ecbff 80%, transparent 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+  z-index:3;
+  opacity:.7;
+  animation:breathSpin 9s linear infinite;
+}
+@keyframes breathSpin{to{transform:rotate(360deg)}}
+
+/* Water — Demon Slayer */
+.popular-grid .anime-card:nth-child(1)::before,
+.news-card:nth-child(1)::before,
+.day-card::before{
+  background:conic-gradient(from 0deg, transparent 0 55%, #0ea5e9, #7dd3fc, transparent 100%);
+  animation-duration:10s;
+}
+
+/* Hollow Purple — JJK */
+.popular-grid .anime-card:nth-child(2)::before,
+.news-card:nth-child(2)::before{
+  background:conic-gradient(from 0deg, transparent 0 55%, #6d28d9, #e879f9, transparent 100%);
+  animation-duration:7s;
+}
+
+/* Flame */
+.news-card:nth-child(3)::before{
+  background:conic-gradient(from 0deg, transparent 0 55%, #ea580c, #fbbf24, transparent 100%);
+  animation-duration:6s;
+}
+
+/* Thunder */
+.popular-grid .anime-card:nth-child(4)::before,
+.news-card:nth-child(4)::before{
+  background:conic-gradient(from 0deg, transparent 0 60%, #facc15, #fff, transparent 100%);
+  animation-duration:5s;
+}
+
+.anime-card:hover::before,
+.news-card:hover::before,
+.day-card:hover::before{
+  opacity:1;
+  filter:drop-shadow(0 0 8px currentColor);
+}
+
+@media (prefers-reduced-motion:reduce){
+  .anime-card::before,.anime-mini-card::before,.news-card::before,.day-card::before{animation:none}
+}
