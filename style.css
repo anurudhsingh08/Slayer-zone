@@ -35,7 +35,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
 #dice{margin:12px 0;opacity:.7}
 
 .main-header,header{
-  position:sticky;top:0;z-index:50;padding:16px 6%;
+  position:relative;z-index:50;padding:16px 6%;
   background:rgba(11,10,9,.86);backdrop-filter:blur(16px);
   border-bottom:1px solid var(--line);
 }
