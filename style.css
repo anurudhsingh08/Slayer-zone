@@ -182,3 +182,32 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
   min-width: 0;
   width: 100%;
 }
+.popular .anime-grid{
+  display:block;
+}
+.popular-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:12px;
+  width:100%;
+}
+.popular-grid .anime-image{
+  position:relative;
+  width:100%;
+  aspect-ratio:3/4;
+  overflow:hidden;
+}
+.popular-grid .anime-image img,
+.popular-grid .anime-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+
+@media (min-width:760px){
+  .popular-grid{grid-template-columns:repeat(4, minmax(0,1fr))}
+}
+@media (max-width:400px){
+  .popular-grid{grid-template-columns:1fr}
+}
