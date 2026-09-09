@@ -164,3 +164,21 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
   .day-card img{height:180px}
   .anime-card img,.anime-mini-card img{height:160px}
   }
+
+.main-header, header{
+  position: relative !important;
+  top: auto !important;
+}
+.search-box{
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+.header-controls{
+  width: 100%;
+  flex-wrap: wrap;
+}
+.search-box input{
+  min-width: 0;
+  width: 100%;
+}
