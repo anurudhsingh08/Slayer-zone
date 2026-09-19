@@ -211,3 +211,35 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
 @media (max-width:400px){
   .popular-grid{grid-template-columns:1fr}
 }
+:root{
+  --bg:#05070f;
+  --paper:#0d1524;
+  --gold:#00e5ff;
+  --gold2:#7ddcff;
+  --ink:#f4f7ff;
+  --muted:#9aa8c2;
+  --line:rgba(0,229,255,.28);
+  --shadow:0 20px 50px rgba(0,0,0,.45);
+}
+body{
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(0,229,255,.16), transparent 50%),
+    radial-gradient(900px 500px at 100% 0%, rgba(77,124,255,.18), transparent 45%),
+    #05070f !important;
+}
+.search-box button,#searchBtn,.music-btn,
+.hero-buttons button,.news-card button,.anime-card button,.anime-mini-card button,
+.arena-btn,.all-anime-btn,.view-all-btn,.card-buttons button,.popup-buttons button,#submitAnswer{
+  color:#031018;
+  background:linear-gradient(135deg,#00e5ff,#4d7cff);
+}
+.hero-buttons button:last-child,
+.all-anime-btn,
+.theme-btn{
+  color:#fff;
+  background:linear-gradient(135deg,#8b6cff,#4d7cff);
+}
+.play-main,#musicBtn{
+  background:linear-gradient(135deg,#00e5ff,#4d7cff)!important;
+  color:#031018!important;
+    }
